@@ -3,24 +3,80 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login | AdU Cats</title>
+        <title>Register | AdU Cats</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- LINKS -->
-        <link rel="stylesheet" href="accounts.css">
+        <link rel="stylesheet" href="temp.css">
+        <link rel="stylesheet" href="register.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
     </head>
     <body>
-        <section class="section_content">
-            <!-- REGISTER FORM -->
-            <div class="register_container">
-                <h1>Sign Up</h1>
-                <form action="">
-                    <input type="text" placeholder="Username">
-                    <input type="text" placeholder="Password">
-                    <button class="register_button">Create an Account</button>
-                </form>
-                <p>Already have an account? Login <a href="">here</a>.</p>
-            </div>
-        </section>
+        <div class="box">
+            <section class="logo">
+                <img src="img/Cat-2.png" alt="logo_cat">
+                <h1>AduCats</h1>
+            </section>
+            <section class="section_content">
+                <!-- REGISTER FORM -->
+                <div class="register_container">
+                    <div class="register_content">
+                        <div class="upper">
+                            <img src="img/pets.png" alt="paw">
+                            <h1>Sign Up</h1>
+                        </div>
+                        <form action="">
+                            <div class="grid-container">
+                                <div class="row">
+                                <input type="text" id="firstName" placeholder="First Name">
+                                <input type="text" id="middleName" placeholder="Middle Name">
+                                </div>
+
+                                <div class="row">
+                                    <input type="text" id="lastName" placeholder="Last Name">
+                                    <input type="text" id="suffix" class="small-input" placeholder="Suffix">
+                                </div>
+
+                                <div class="row">
+                                    <input type="text" id="username" placeholder="Username">
+                                    <input type="text" id="birthdate" class="small-input" placeholder="Birthdate">
+                                </div>
+
+                                <div class="row">
+                                    <input type="text" id="emailAddress" placeholder="Email Address">
+                                    <input type="text" id="password" placeholder="Password">
+                                </div>
+
+                                <div class="row">
+                                    <select name="gender" id="gender">
+                                        <option value="">Are you a...</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="others">Others</option>
+                                        <option value="prefer_not_to_say">Prefer not to specify</option>
+                                    </select>
+                                    <input type="text" id="confirmpassword" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                        </form>
+                        <button class="register_button">Create an Account</button>
+                        <p>Already have an account? Login <a href="">here</a>.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/js-datepicker@latest/dist/datepicker.min.js"></script>
+
+        <script>
+        const birthdateInput = document.getElementById('birthdate');
+        const datepicker = new datepicker(birthdateInput); // Initialize datepicker
+
+        birthdateInput.addEventListener('click', function() {
+        datepicker.show(); // Show the calendar pop-up on click
+        });
+        </script>
+        <script src="register.js"></script>
     </body>
 </html>

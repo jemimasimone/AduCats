@@ -33,13 +33,12 @@ body{
 }
 
 .register_container{
-    width: 100vh;
-    height: 70vh;
+    width: 1096px;
+    height: 746px;
     background-color: #4A3432;
     color: #FCFCF0;
     border-radius: 4vh;
-    align-content: center;
-    padding: 50px;
+    padding: 40px;
 }
 
 /* COMPONENTS */
@@ -70,7 +69,8 @@ input{
 }
 
 .register_button{
-    height: 35px;
+    width: 452px;
+    height: 48px;
     background-color: #8F6C49;
     border: #8F6C49;
     color: #FCFCF0;
@@ -80,4 +80,16 @@ input{
 p, a{
     color: #FCFCF0;
     text-decoration: none;
+}
+
+.register_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

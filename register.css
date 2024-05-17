@@ -1,0 +1,56 @@
+.logo h1{
+  font-size: 100px;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+h1 {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns of equal size */
+    grid-gap: 10px; /* Adjust spacing between elements */
+  }
+  
+  .row {
+    display: flex; /* Makes elements within the row side-by-side */
+    align-items: center;
+  }
+  
+  /* New styles for different size boxes */
+  .small-input {
+    width: 204px; /* Adjust width as needed */
+  }
+
+  input{
+    height: 54px;
+    width: 409px;
+    padding: 0 10px;
+  }
+
+  select {
+    width: 409px;
+    height: 54px;
+    padding: 0 10px;
+    border: 1px solid #8F6C49;
+    border-radius: 4px;
+    background-color: #FCFCF0;
+    color: #757575;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #F49300;
+  }
+  
+  .upper{
+    display: flex;
+    align-items: center;
+  }
