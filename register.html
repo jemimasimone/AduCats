@@ -27,55 +27,67 @@
                             <img src="img/pets.png" alt="paw">
                             <h1>Sign Up</h1>
                         </div>
-                        <form action="">
+                        <form action="php/registration.php" method="POST" onsubmit="return validateForm()">
                             <div class="grid-container">
                                 <div class="row">
-                                <input type="text" id="firstName" placeholder="First Name">
-                                <input type="text" id="middleName" placeholder="Middle Name">
+                                    <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                                    <input type="text" name="middleName" id="middleName" placeholder="Middle Name">
                                 </div>
-
                                 <div class="row">
-                                    <input type="text" id="lastName" placeholder="Last Name">
-                                    <input type="text" id="suffix" class="small-input" placeholder="Suffix">
+                                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                                    <input type="text" name="suffix" id="suffix" class="small-input" placeholder="Suffix">
                                 </div>
-
                                 <div class="row">
-                                    <input type="text" id="username" placeholder="Username">
-                                    <input type="text" id="birthdate" class="small-input" placeholder="Birthdate">
+                                    <input type="text" name="username" id="username" placeholder="Username" required>
+                                    <input type="date" name="birthdate" id="birthdate" class="small-input" placeholder="Birthdate" required>
                                 </div>
-
                                 <div class="row">
-                                    <input type="text" id="emailAddress" placeholder="Email Address">
-                                    <input type="text" id="password" placeholder="Password">
+                                    <input type="email" name="emailAddress" id="emailAddress" placeholder="Email Address" required>
+                                    <input type="password" name="password" id="password" placeholder="Password" required>
                                 </div>
-
                                 <div class="row">
-                                    <select name="gender" id="gender">
+                                    <select name="role" id="role" required>
                                         <option value="">Are you a...</option>
                                         <option value="student">Student</option>
                                         <option value="employee">Employee</option>
                                         <option value="outsider">Outsider</option>
                                     </select>
-                                    <input type="text" id="confirmpassword" placeholder="Confirm Password">
+                                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
                                 </div>
                             </div>
+                            <button class="register_button" type="submit">Create an Account</button>
                         </form>
-                        <button class="register_button">Create an Account</button>
+                                             
                         <p>Already have an account? Login <a href="">here</a>.</p>
                     </div>
                 </div>
             </section>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/js-datepicker@latest/dist/datepicker.min.js"></script>
 
-        <script>
+        <!-- SCRIPT SECTION -->
+        <script src="https://cdn.jsdelivr.net/npm/js-datepicker@latest/dist/datepicker.min.js"></script>
+        <script src="register.js"></script>
+
+        <script> // Date picker
         const birthdateInput = document.getElementById('birthdate');
-        const datepicker = new datepicker(birthdateInput); // Initialize datepicker
+        const datepicker = new datepicker(birthdateInput); 
 
         birthdateInput.addEventListener('click', function() {
-        datepicker.show(); // Show the calendar pop-up on click
+        datepicker.show(); 
         });
         </script>
-        <script src="register.js"></script>
+
+        <script> // Confirm Password Alert 
+            function validateForm() {
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmpassword").value;
+    
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match!");
+                    return false; 
+                }
+                return true; 
+            }
+        </script>
     </body>
 </html>
