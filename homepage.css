@@ -22,7 +22,7 @@ body{
     color: #F49300;
     font-weight: bold;
     height: fit-content;
-   
+    letter-spacing: 1.9px;
 }
 
 /*nav bar button*/
@@ -36,38 +36,39 @@ body{
     width: 150px;
     padding: 10px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
+.right-navbar button:hover{
+    background-color: #F49300;
+    color: #f2f2f2;
+    transition: 0.3s;
+
+}
 
 
 /*nav bar logo*/
 #AduCatsLogo{
     height: 75px;
-    margin-right: 50px;
     margin-top: -10px;
 }
 
 /*left nav bar*/
 
-.left-navbar, .right-navbar {
-    display:flex ;
-    flex-wrap: wrap;
-   }
+
 .left-navbar a {
     margin-left: 50px;
 }
 
 .right-navbar a {
     margin-right: 50px;
+
 }
 
+.right-navbar  {
+    justify-content: right;
 
-.dropdown-content, .dropbtn{
-    display: none;
 }
-
-
-
 
 /*responsiveness of navbar*/
 
@@ -135,4 +136,62 @@ body{
       
       }
 
+}
+
+
+
+/*Homepage*/
+
+.Homepage-Content{
+   margin: 50px;
+}
+
+/*orange button*/
+.left-side-container button, .right-side-container button{
+    height: 40px;
+    width: fit-content;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+    background-color: #F49300;
+    color: #f2f2f2;
+    border-radius: 4px;
+    border: 0;
+ }
+
+
+/*left-side-Container*/
+
+
+/*right-side-Container*/
+
+
+
+.Overview, .Information, .Links{
+    display: flex;
+}
+
+
+
+
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #282A2C;
+    color: #f2f2f2;
+    font-size: 10px;
+    padding: 10px;
+
+}
+
+footer div{
+    display: flex;
+}
+
+footer p{
+    padding-right: 20px;
 }
