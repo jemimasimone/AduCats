@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #F2F2F2;
+    color: #646363;
+}
+
+.records{
+    width: 85%;
+    height: 30vh;
+    margin: 50px;
+}
+
+.record-content{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.table{
+    height: 400px;
+    table-layout: fixed;
+}
+.logo h1{
+    font-size: 100px;
+  }
+  .logo{
+    display: flex;
+    color: #F49300;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .hline {
+    width: 100%;  
+    height: 3px;   
+    background-color: #F49300;
+  }
+  h3{
+    font-size: 40px;
+    color: #646363;
+  }
+  .table td {
+    width: 50%; /* Example: 50% for each column */
+  }
