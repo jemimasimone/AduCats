@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Dongle', sans-serif;
+}
+body{
+    background-color: #F49300;
+    color: #F2F2F2;
+}
+
+/*nav bar*/
+
+.nav_bar {
+    display: flex;
+    padding: 20px;
+    flex-basis: 15%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid #f2f2f2;
+    font-size: 23px;
+    flex-wrap: wrap;
+}
+
+/*nav bar links*/
+.nav_bar a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-weight: bold;
+    height: fit-content;
+    letter-spacing: 1.9px;
+}
+
+/*nav bar button*/
+
+.right-navbar button{
+    background-color: #47494D;
+    color: #f2f2f2;
+    font-weight: bold;
+    border: 0;
+    height: 40px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right-navbar button:hover{
+    background-color: #F49300;
+    color: #f2f2f2;
+    transition: 0.3s;
+
+}
+
+
+/*nav bar logo*/
+#AduCatsLogo{
+    height: 75px;
+    margin-top: -10px;
+}
+
+/*left nav bar*/
+
+
+.left-navbar a {
+    margin-left: 50px;
+}
+
+.right-navbar a {
+    margin-right: 50px;
+
+}
+
+.right-navbar  {
+    justify-content: right;
+
+}
+
+/*responsiveness of navbar*/
+
+@media (max-width:1200px){
+      
+    .left-navbar{
+        order: 2;
+        
+
+    }
+      .right-navbar a{
+          display: none;
+          
+      }
+      
+      .right-navbar button{
+          display: none;
+      }
+  
+      #AduCatsLogo {
+          height: 80px;
+          margin-right: 0;
+          order: 1;
+          padding:0;
+          transition: 0.5s;
+      }
+
+      .nav_bar{
+        justify-content: left;
+      
+      }
+
+
+}
+
+
+@media (max-width:900px){
+   
+   
+    .left-navbar a  {
+        display: none;
+      }
+  
+      .right-navbar a{
+          display: none;
+      }
+      
+      .right-navbar button{
+          display: none;
+      }
+  
+      #AduCatsLogo {
+          height: 90px;
+          transition: 0.4s;
+          margin-right: 0;
+          justify-content: left;
+          text-align: left;
+          transition: 0.6s;
+  
+      }
+
+      
+      .nav_bar{
+        justify-content: center;
+      
+      }
+
+}
+
+.overview{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cat-table{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, minmax(0, 1fr)); /* Three rows with equal height */
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.cat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cat-cover{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
+    border-radius: 100px;
+}
+
+.cat-info{
+    font-size: 14px;
+    color: #F2F2F2;
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+}
+
+.info{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+input[type='text']:not(.cat-info){
+    font-size: 24px;
+    color: #F2F2F2;
+    background-color: transparent;
+    border: transparent;
+    margin-left: 25px;
+    margin-bottom: 55px;
+}
+
+textarea{
+    font-size: 34px;
+    color: #F2F2F2;
+    background-color: transparent;
+    border: transparent;
+}
+
+.cat-img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 80px;
+}
