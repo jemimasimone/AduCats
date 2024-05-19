@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Dongle', sans-serif;
+}
+body{
+    background-color: #F2F2F2;
+    color: #F49300;
+}
+
+.records{
+    width: 700px;
+    height: 30vh;
+    margin: 50px;
+    background-color: burlywood;
+}
+
+.record-content{
+    height: 150px;
+    width: 100%;
+    overflow: auto;
+}
+
+.table{
+    height: 400px;
+}
