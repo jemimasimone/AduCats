@@ -63,6 +63,15 @@ body{
   #suffix{
     margin-left: 10px;
   }
+  #birthdate{
+    margin-left: 10px;
+  }
+  #gender{
+    margin-left: 10px;
+  }
+  #info-input{
+    margin-left: 10px;
+  }
   .btn{
     display: flex;
     flex-direction: row;
@@ -97,4 +106,46 @@ body{
     margin: 15px 0px;
     border-radius: 20px;
     border-color: transparent;
+  }
+  select {
+    width: 409px;
+    height: 54px;
+    padding: 0 10px;
+    border: 1px solid #8F6C49;
+    border-radius: 4px;
+    color: #757575;
+  }
+  .comments{
+    width: 1109px;
+    height: 296px;
+    border-radius: 4px;
+    padding: 0 10px;
+    margin: 15px 0px;
+    border-color: #8F6C49;
+  }
+  .small-input {
+    width: 240px; /* Adjust width as needed */
+  }
+  .submit-btn{
+    display: flex;
+    justify-content: center;
+  }
+
+
+input[type="radio"] {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.row-radio{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.no-click {
+    pointer-events: none;
+    color: #6d7d8b;
   }

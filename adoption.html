@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Adopt | AdU Cats</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS -->
+        <link rel="stylesheet" href="form.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="logo">
+            <img src="img/Cat-2.png" alt="logo_cat">
+            <h1>Adoption</h1>
+        </header>
+            <div class="hline"></div>
+        <form action=""></form>
+        <section class="upper">
+            <h3>Adopter</h3>
+                <div class="grid-container">
+                    <div class="row">
+                        <input type="text" id="name" placeholder="Name">
+                        <input type="text" id="emailAddress" placeholder="Email Address">
+                    </div>
+                    
+                    <div class="row">
+                        <input type="text" id="phoneNumber" pattern="[0-9]{11}" placeholder="Phone Number" title="PLease enter a valid 11-digit phone number">
+                        <input type="text" id="birthdate" class="small-input" placeholder="Birthdate">
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="adress1" placeholder="Address 1 (street and barangay)">
+                        <select name="gender" id="gender" class="small-input">
+                            <option value="">Gender</option>
+                            <option value="female>Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="adress2" placeholder="Address 2 (region/province)">
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="adress2" placeholder="Address 3 (postal code)">
+                    </div>
+
+                </div>
+
+        </section>
+        <section class="lower">
+            <h3>Cat</h3>
+                <div class="grid-container">
+                    <div class="row">
+                        <input type="text" id="name" placeholder="Name">
+                    </div>
+
+                    <div class="row">
+                        <select name="age" id="age" class="small-input">
+                            <option value="">Age</option>
+                            <option value="student">Student</option>
+                            <option value="employee">Employee</option>
+                            <option value="outsider">Outsider</option>
+                        </select>
+                        <select name="gender" id="gender" class="small-input">
+                            <option value="">Gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+
+                    <textarea class="comments">Comments</textarea>
+                </div>
+        </section>
+    </form>
+    <div class="submit-btn">
+        <button class="submit">SUBMIT</button>
+    </div>
+    </body>
+</html>

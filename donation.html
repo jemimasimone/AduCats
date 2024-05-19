@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Donate | AdU Cats</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS -->
+        <link rel="stylesheet" href="form.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="logo">
+            <img src="img/Cat-2.png" alt="logo_cat">
+            <h1>Donation</h1>
+        </header>
+            <div class="hline"></div>
+        <form action=""></form>
+        <section class="upper">
+            <h3>Donor</h3>
+                <div class="grid-container">
+                    <div class="row-radio">
+                        <label for="red" class="no-click">Input Information</label>
+                        <input type="radio" id="red" name="donor-info" value="red">
+                        
+                        <label for="green" class="no-click">Anonymous</label>
+                        <input type="radio" id="green" name="donor-info" value="green">
+                      </div>
+
+                    <div class="row">
+                        <input type="text" id="name" placeholder="Name">
+                        <input type="text" id="emailAddress" placeholder="Email Address">
+                    </div>
+                    
+                    <div class="row">
+                        <input type="text" id="phoneNumber" pattern="[0-9]{11}" placeholder="Phone Number" title="PLease enter a valid 11-digit phone number">
+                    </div>
+                </div>
+
+        </section>
+        <section class="lower">
+            <h3>Donated</h3>
+                <div class="grid-container">
+                    <div class="row-radio">
+                        <label for="red" class="no-click">Cash</label>
+                        <input type="radio" id="red" name="donor-info" value="red">
+                        
+                        <label for="green" class="no-click">Goods</label>
+                        <input type="radio" id="green" name="donor-info" value="green">
+                      </div>
+                        
+
+                    <div class="row">
+                        <input type="text" id="amount" placeholder="Amount">
+                        <input type="text" id="info-input" placeholder="Input">
+                    </div>
+
+
+                    <div class="row">
+                        <select name="mop" id="mop" class="small-input">
+                            <option value="">Mode of Transaction</option>
+                            <option value="cash">Cash</option>
+                            <option value="gcash">Gcash</option>
+                        </select>
+                    </div>
+                    
+                    <div class="row">
+                        <input type="text" id="name" placeholder="Name of Receiver">
+                    </div>
+                </div>
+        </section>
+    </form>
+    <div class="submit-btn">
+        <button class="submit">SUBMIT</button>
+    </div>
+    </body>
+</html>
