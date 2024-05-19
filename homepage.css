@@ -1,0 +1,138 @@
+
+body{
+    background-color: #f2f2f2;
+}
+
+/*nav bar*/
+
+.nav_bar {
+    display: flex;
+    padding: 20px;
+    flex-basis: 15%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid #F49300;
+    font-size: 23px;
+    flex-wrap: wrap;
+}
+
+/*nav bar links*/
+.nav_bar a {
+    text-decoration: none;
+    color: #F49300;
+    font-weight: bold;
+    height: fit-content;
+   
+}
+
+/*nav bar button*/
+
+.right-navbar button{
+    background-color: #47494D;
+    color: #f2f2f2;
+    font-weight: bold;
+    border: 0;
+    height: 40px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+
+/*nav bar logo*/
+#AduCatsLogo{
+    height: 75px;
+    margin-right: 50px;
+    margin-top: -10px;
+}
+
+/*left nav bar*/
+
+.left-navbar, .right-navbar {
+    display:flex ;
+    flex-wrap: wrap;
+   }
+.left-navbar a {
+    margin-left: 50px;
+}
+
+.right-navbar a {
+    margin-right: 50px;
+}
+
+
+.dropdown-content, .dropbtn{
+    display: none;
+}
+
+
+
+
+/*responsiveness of navbar*/
+
+@media (max-width:1200px){
+      
+    .left-navbar{
+        order: 2;
+        
+
+    }
+      .right-navbar a{
+          display: none;
+          
+      }
+      
+      .right-navbar button{
+          display: none;
+      }
+  
+      #AduCatsLogo {
+          height: 80px;
+          margin-right: 0;
+          order: 1;
+          padding:0;
+          transition: 0.5s;
+      }
+
+      .nav_bar{
+        justify-content: left;
+      
+      }
+
+
+}
+
+
+@media (max-width:900px){
+   
+   
+    .left-navbar a  {
+        display: none;
+      }
+  
+      .right-navbar a{
+          display: none;
+      }
+      
+      .right-navbar button{
+          display: none;
+      }
+  
+      #AduCatsLogo {
+          height: 90px;
+          transition: 0.4s;
+          margin-right: 0;
+          justify-content: left;
+          text-align: left;
+          transition: 0.6s;
+  
+      }
+
+      
+      .nav_bar{
+        justify-content: center;
+      
+      }
+
+}
