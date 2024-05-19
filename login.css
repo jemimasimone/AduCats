@@ -33,6 +33,17 @@ body{
 
 }
 
+
+/*responsivenes*/
+@media (max-width: 850px)
+{
+#logo {
+    height: 100px;
+}
+}
+
+
+
 #paula {
     height: 80vh;
     margin-top: -100px;
