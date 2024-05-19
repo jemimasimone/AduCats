@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #f2f2f2;
+}
+
+.logo h1{
+    font-size: 100px;
+  }
+  .logo{
+    display: flex;
+    color: #F49300;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .hline {
+    width: 100%;  
+    height: 3px;   
+    background-color: #F49300;
+  }
+  h3 {
+    padding: 3%;
+    color: #a6a6a6;
+    font-size: 24px;
+  }
+  .upper{
+    display: flex;
+    flex-direction: column;
+  }
+  input{
+    height: 54px;
+    width: 409px;
+    padding: 0 10px;
+    margin: 15px 0px;
+    border-color: #8F6C49;
+    border-radius: 4px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns of equal size */
+    grid-gap: 10px; /* Adjust spacing between elements */
+    margin: 0% 0% 0% 10%;
+  }
+  .row {
+    display: flex; /* Makes elements within the row side-by-side */
+    align-items: center;
+  }
+  #emailAddress{
+    margin-left: 10px;
+  }
+  #lastName{
+    margin-left: 10px;
+  }
+  #suffix{
+    margin-left: 10px;
+  }
+  .btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0% 4% 0% 0%;
+  }
+  .edit{
+    background-color: #6CCEE3;
+    width: 168px;
+    height: 76px;
+    color: #FCFCF0;
+    margin: 15px 0px;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-left: 60px;
+  }
+  .changePassword{
+    background-color: #8F6C49;
+    width: 168px;
+    height: 76px;
+    color: #FCFCF0;
+    margin: 15px 0px;
+    border-radius: 20px;
+    border-color: transparent;
+  }
