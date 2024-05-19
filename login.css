@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-color: #FCFCF0;
+    color: #4A3432;
+
+}
+
+
+
+
+/*buong login*/ 
+.login_content{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+/*yung pictures sa left side*/
+
+.left_side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex:1;
+
+}
+
+#paula {
+    height: 80vh;
+    margin-top: -100px;
+}
+
+
+/*yung form right side*/ 
+
+.right_side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.login_container
+{
+    background-color: #F49300;
+    border-radius: 5%;
+    display: flex;
+    padding: 50px;
+    line-height: 2;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+
+    
+}
+
+.login_container input , button{
+ height: 43px;
+ width: 300px;
+ padding: 10px;
+ display: flex;
+ margin: 20px;
+ color: #4A3432;
+ font-weight: bold;
+ border-radius: 5px;
+ border-color: #4A3432;
+}
+
+.login_container button{
+    color: #FCFCF0;
+    background-color: #4A3432;
+    justify-content: center;
+    align-items: center;
+   }
+
+
+.login_container p, a {
+    color: #FCFCF0;
+    text-decoration: none;
+}
+
+button:hover {
+    color: #F49300 ;
+    background-color: #FCFCF0;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: #4A3432;
+    transition: 0.4s;
+
+}
