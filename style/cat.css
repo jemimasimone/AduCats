@@ -241,29 +241,13 @@ body{
 /*yung input na text infos ngf pusa*/
 input[type='text']:not(.cat-info){
     font-size: 24px;
-    color: #F2F2F2;
     background-color: transparent;
     border: transparent;
     margin-left: 25px;
     margin-bottom: 55px;
-  
 }
 
 
-/*Quote ng posa*/
-
-
-.cat-quote{
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
-    font-size: 34px;
-    color: #F2F2F2;
-    background-color: transparent;
-    border: transparent;
-    text-align: center;
-    margin: 10px;
-}
 
 
 
@@ -277,10 +261,19 @@ input[type='text']:not(.cat-info){
     display: flex;
     flex-direction: column;
     padding: 40px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 /*Picture ng posa*/
+
+
+.topImg{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .cat-img{
     width:15rem;
     margin-bottom: 25px;
@@ -289,13 +282,42 @@ input[type='text']:not(.cat-info){
     box-shadow: 0 4px 10px #47494D;
     align-self: center;
 }
+
+/*Quote ng posa*/
+
+
+.cat-quote{
+    font-size: 25px;
+    color: #FCFCF0;;
+    border: transparent;
+    text-align: center;
+    margin: 20px;
+}
+
+.botCatInfo{
+    background-color: #FCFCF0;
+    border-radius: 20px;
+    color: #8F6C49;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.botCatInfo label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
 /*Footer*/
 
 footer {
     display: flex;
     justify-content: space-between;
     background-color: #282A2C;
-    color: #f2f2f2;
+    color: #FCFCF0;
     font-size: 20px;
     padding: 10px;
     
