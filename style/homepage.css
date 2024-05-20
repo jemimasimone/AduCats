@@ -394,6 +394,7 @@ body{
 }
 
 
+
 /*Footer*/
 
 footer {
@@ -446,7 +447,7 @@ footer a:hover{
 }
 
 .ContactUs p{
-   line-height: 0;
+   margin-top:0 ;
 }
 
 
