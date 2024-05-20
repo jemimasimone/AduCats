@@ -1,7 +1,12 @@
 
-
 body{
     background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding: 0;
+    
+
+  
 }
 
 /*nav bar*/
@@ -13,8 +18,10 @@ body{
     justify-content: space-between;
     align-items: center;
     border-bottom: solid #F49300;
-    font-size: 23px;
+    font-size: 20px;
     flex-wrap: wrap;
+    min-width: fit-content;
+
 }
 
 /*nav bar links*/
@@ -25,6 +32,14 @@ body{
     height: fit-content;
     letter-spacing: 1.9px;
 }
+
+.nav_bar a:hover {
+
+    color: #282A2C;
+    transition: 0.4s;
+
+}
+
 
 /*nav bar button*/
 
@@ -141,15 +156,38 @@ body{
 
 
 
-/*Homepage*/
+/*Homepage at mga pinagsama*/
 
-.Homepage-Content{
-   margin: 50px;
-}
+
 
 .Overview, .Information, .Links{
+    margin:50px;
     display: flex;
+    color: #282A2C;
+    justify-content:center ;
+    align-items: center;
+    align-content: center;
+    line-height: 2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+    
+
 }
+
+
+.left-side-container h1, .right-side-container h1{
+    color: #F49300;
+    justify-content:center ;
+    align-items: center;
+    align-content: center;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    
+}
+
+
 
 /*orange button*/
 .left-side-container button, .right-side-container button{
@@ -164,16 +202,60 @@ body{
     color: #f2f2f2;
     border-radius: 4px;
     border: 0;
+    cursor: pointer;
  }
 
 
-/*left-side-Container*/
+ .left-side-container button:hover, .right-side-container button:hover{
 
+    background-color: #282A2C;
+    color: #f2f2f2;
+    transition: 0.3s;
 
-/*right-side-Container*/
+    
+ }
 
 
 /*Overview*/
+
+
+
+/*Pangalawang Part Information*/
+#AduCatCommunity {
+    margin:1.5rem;
+    width: 43rem;
+    box-shadow: 0 1.5rem  -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 20px;
+}
+
+
+/*Pangatlong Part Links*/
+.Links{
+    background-color: #47494D;
+    padding: 2rem;
+    margin:0;
+    height: 600px;
+    
+   
+    
+}
+
+.Links div{
+
+    Margin: 2rem;
+    width: 700px;
+
+    
+}
+
+.Links h2, .Links p{
+    color: #f2f2f2;
+}
+
+.Links p{
+    font-weight: 400;
+}
+
 
 
 
@@ -186,6 +268,7 @@ body{
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
+
 }
 
 .slider{
@@ -196,6 +279,8 @@ body{
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
     border-radius: 0.5rem;
+    overflow-x: hidden;
+    
 }
 
 /*para kasya*/
@@ -203,6 +288,7 @@ body{
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+    
 }
 
 
@@ -216,7 +302,96 @@ body{
     z-index:1;
 }
 
+.slider-nav a{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #ffff;
+    opacity: 0.75;
+    transition: 0.3s;
+    
+}
 
+.slider-nav a:hover{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #ffff;
+    opacity: 100%;
+    transition: opacity ease 250ms;
+}
+
+
+/*Photos Responsiveness*/
+
+@media (max-width: 1200px){
+    .container {
+        width: 30rem;
+        transition: 0.5s;
+    }
+
+    .slider-nav a{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+
+    #AduCatCommunity{
+        width: 25rem;
+        transition: 0.5s;
+    }
+}
+
+
+@media (max-width: 900px){
+    .container {
+        width: 20rem;
+        transition: 0.3s;
+    }
+
+    #AduCatCommunity{
+        width: 20rem;
+        transition: 0.3s;
+    }
+}
+
+/*Texts Responsiveness*/
+
+@media (max-width: 1200px) {
+    .left-side-container h1, .right-side-container h1{
+        
+        font-size: 1.7rem;
+        transition: 0.5s;
+        
+    }
+
+    .Overview, .Information, .Links{
+    font-size: 15px;
+    transition: 0.5s;
+    
+    }
+
+    .Links{
+        height: fit-content;
+        transition: 0.5s;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .left-side-container h1, .right-side-container h1{
+        
+        font-size: 1.3rem;
+        transition: 0.5s;
+        
+    }
+
+    .Overview, .Information, .Links{
+        font-size: 13px;
+        transition: 0.5s;
+        
+        
+    }
+}
 
 
 /*Footer*/
@@ -226,16 +401,73 @@ footer {
     justify-content: space-between;
     background-color: #282A2C;
     color: #f2f2f2;
-    font-size: 10px;
+    font-size: 20px;
     padding: 10px;
-    object-fit: cover;
 
 }
+
+
 
 footer div{
     display: flex;
+
 }
 
-footer p{
+footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-right: 20px;
+    text-decoration: none;
+    color: #f2f2f2;
+   
+}
+
+footer a:hover{
+
+    color: #F49300;
+    transition: 0.3s;
+
+}
+
+
+
+/*footer responsivenss*/
+
+
+@media(max-width:1200px){
+
+    footer{
+        font-size: 1rem;
+        transition: 0.5s;
+    }
+}
+@media(max-width:800px){
+
+    
+     
+    footer{
+        flex-direction: column;
+       
+    }
+
+    footer p, footer a{
+        justify-content: left;
+        display: flex;
+        padding-left: 40px;
+        transition: 0.5s;
+        
+    }
+
+    .right-side-footer  {
+        display: block;
+        line-height: 2;
+    }
+
+    .right-side-footer a {
+        width: fit-content;
+    }
+
+
+ 
 }
