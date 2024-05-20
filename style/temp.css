@@ -75,6 +75,10 @@ input{
     border: #8F6C49;
     color: #FCFCF0;
     margin: 15px 0px;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 p, a{

@@ -122,6 +122,7 @@ body{
     padding: 0 10px;
     margin: 15px 0px;
     border-color: #8F6C49;
+    color: #a6a6a6;
   }
   .small-input {
     width: 240px; /* Adjust width as needed */

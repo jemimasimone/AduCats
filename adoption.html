@@ -38,7 +38,7 @@
                         <input type="text" id="adress1" placeholder="Address 1 (street and barangay)">
                         <select name="gender" id="gender" class="small-input">
                             <option value="">Gender</option>
-                            <option value="female>Female</option>
+                            <option value="female">Female</option>
                             <option value="male">Male</option>
                         </select>
                     </div>
@@ -78,9 +78,47 @@
                     <textarea class="comments">Comments</textarea>
                 </div>
         </section>
+        <div class="submit-btn">
+            <button class="submit">SUBMIT</button>
+        </div>
     </form>
-    <div class="submit-btn">
-        <button class="submit">SUBMIT</button>
-    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var commentsTextarea = document.querySelector(".comments");
+
+            commentsTextarea.addEventListener("focus", function() {
+                if (this.value === "Comments") {
+                    this.value = "";
+                }
+            });
+
+            commentsTextarea.addEventListener("blur", function() {
+                if (this.value === "") {
+                    this.value = "Comments";
+                }
+            });
+        });
+
+        const genderSelect = document.getElementById('gender');
+        const registerForm = document.querySelector('form'); // Assuming your form has a tag
+
+        registerForm.addEventListener('submit', function(event) {
+        const selectedGender = genderSelect.value;
+        if (selectedGender === "") {
+            event.preventDefault(); // Prevent form submission
+            alert("Please select your gender.");
+        }
+        });
+
+        document.getElementById('gender').addEventListener('change', function() {
+        if (this.value) {
+            this.style.color = 'black';
+        } else {
+            this.style.color = '#757575'; // default color for the placeholder
+        }
+        });
+    </script>
+
     </body>
 </html>
