@@ -98,3 +98,6 @@ body{
     border-radius: 20px;
     border-color: transparent;
   }
+  .small-input {
+    width: 240px; /* Adjust width as needed */
+  }

@@ -70,3 +70,7 @@ h1 {
   #confirmpassword{
     margin-left: 10px;
   }
+.reg-btn{
+  display: flex;
+  justify-content: center;
+}

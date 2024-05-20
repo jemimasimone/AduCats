@@ -50,14 +50,22 @@
                     </div>
 
                     <div class="row">
-                        <input type="text" id="birthdate" class="small-input" placeholder="Birthdate">
+                        <input type="date" name="birthdate" id="birthdate" class="small-input" placeholder="Birthdate" required>
                     </div>
                 </div>
         </section>
+        <div class="btn">
+            <button class="changePassword">CHANGE PASSWORD</button>
+            <button class="edit">EDIT</button>
+        </div>
     </form>
-    <div class="btn">
-        <button class="changePassword">CHANGE PASSWORD</button>
-        <button class="edit">EDIT</button>
-    </div>
+    <script> // Date picker
+        const birthdateInput = document.getElementById('birthdate');
+        const datepicker = new datepicker(birthdateInput); 
+
+        birthdateInput.addEventListener('click', function() {
+        datepicker.show(); 
+        });
+    </script>
     </body>
 </html>
