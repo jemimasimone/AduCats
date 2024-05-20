@@ -403,21 +403,36 @@ footer {
     color: #f2f2f2;
     font-size: 20px;
     padding: 10px;
+    
 
 }
 
+/*yung pusang logo*/
+#FooterLogo{
+    width: 7rem;
+}
+
+.AduCatsLogo p, .AduCatsLogo img{
+    align-self: center;
+}
 
 
-footer div{
+footer > div{
     display: flex;
+    flex-direction: column;
+    width: 20rem;
+    text-align: left;
+    line-height: 2;
+    margin: 20px;
 
+}
+
+.Address p{
+    margin: 0;
+    align-items: start;
 }
 
 footer a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
     text-decoration: none;
     color: #f2f2f2;
    
@@ -430,6 +445,11 @@ footer a:hover{
 
 }
 
+.ContactUs p{
+   line-height: 0;
+}
+
+
 
 
 /*footer responsivenss*/
@@ -440,34 +460,18 @@ footer a:hover{
     footer{
         font-size: 1rem;
         transition: 0.5s;
+        justify-content: space-between;
     }
 }
 @media(max-width:800px){
 
     
-     
-    footer{
-        flex-direction: column;
-       
-    }
-
-    footer p, footer a{
-        justify-content: left;
-        display: flex;
-        padding-left: 40px;
+    #FooterLogo{
+        width: 4rem;
         transition: 0.5s;
+       
         
     }
-
-    .right-side-footer  {
-        display: block;
-        line-height: 2;
-    }
-
-    .right-side-footer a {
-        width: fit-content;
-    }
-
-
  
 }
+
