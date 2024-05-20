@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
     background-color: #F49300;
@@ -194,21 +194,30 @@ body{
 
 /*picture ng indiv posa*/
 .cat-cover{
-    width: 120px;
-    height: 120px;
+    width:15rem;
     margin-bottom: 25px;
-    border-radius: 100px;
+    border-radius: 180px;
+    border: solid 5px #F2F2F2;
+    box-shadow: 0 4px 10px #47494D;
 
 }
 
 /*yung info ng indiv posa*/
 
 .cat-info{
-    font-size: 14px;
-    color: #F2F2F2;
+    font-size: 20px;
+    font-weight: bold;
     background-color: transparent;
     border: transparent;
     text-align: center;
+    line-height: 1.5;
+   
+}
+
+.cat-info::placeholder{
+    color: #F2F2F2;
+    letter-spacing: 2px;
+    
 
 }
 
@@ -227,12 +236,6 @@ body{
 /*left yung block ng info*/
 /*right yung block ng pcitures*/
 
-.left, .right{
-    display: flex;
-    flex-direction: column;
-    margin-left: 70px;
-  
-}
 
 
 /*yung input na text infos ngf pusa*/
@@ -248,25 +251,44 @@ input[type='text']:not(.cat-info){
 
 
 /*Quote ng posa*/
-textarea{
+
+
+.cat-quote{
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
     font-size: 34px;
     color: #F2F2F2;
     background-color: transparent;
     border: transparent;
+    text-align: center;
+    margin: 10px;
+}
 
+
+
+
+/*POPIP*/
+.popup{
+    width: 40rem;
+    background-color: #282A2C;
+    border-radius: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    letter-spacing: 5px;
 }
 
 /*Picture ng posa*/
-
 .cat-img{
-    width: 150px;
-    height: 150px;
-    margin-bottom: 80px;
-    border: solid 5px yellow;
+    width:15rem;
+    margin-bottom: 25px;
+    border-radius: 180px;
+    border: solid 5px #F49300;
+    box-shadow: 0 4px 10px #47494D;
+    align-self: center;
 }
-
-
-
 /*Footer*/
 
 footer {
