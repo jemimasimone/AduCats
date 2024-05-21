@@ -33,72 +33,50 @@
           </nav>
 
         <!-- SECTION: CAT OVERVIEW -->
+        <!-- short info display-->
         <section class="overview">
             <div class="cat-table">
                 <div class="cat">
-                    <a href=""><img class="cat-cover" src="img/TarsierProfile.png" alt=""></a>
+                    <a onclick="openPopup()"><img class="cat-cover" src="img/TarsierProfile.png" alt=""></a>
                     <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
                     <input type="text" class="cat-info" placeholder="Female" readonly>
                 </div>
-<div class="popup">
-
-     <!-- IMAGE -->
-     <div class="back">
-        <h1><</h1>
-
-     </div>
-        <div class="topImg">
-            <img class="cat-img" src="img/TarsierInfo.png" alt="">
-            <h3 class="cat-quote">"I am Tarsier. I like to climb and I always look grumpy."</h3>
-        </div>
 
 
-     <!-- INFO-->
-        <div class="botCatInfo">
-            
+        <!-- POPUP display info -->
 
-                <label>NAME:<input type="text" placeholder="Tarsier" readonly></label>
-                <label>GENDER:<input type="text" placeholder="Female" readonly></label>
-                <label>AGE:<input type="text" placeholder="2 years old" readonly></label>
-                <label>STATUS:<input type="text" placeholder="Healthy" readonly></label>
-                <label>USUALLY SEEN:<input type="text" placeholder="ST GROUNDS" readonly></label>
-       
-           
-            
-        </div>
+                <div class="popup" id="popup">
 
-</div>
-                 <!-- 
-                <div class="cat">
-                    <img class="cat-cover" src="img/TarsierProfile.png" alt="">
-                    <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
-                    <input type="text" class="cat-info" placeholder="Female" readonly>
+                    <!-- IMAGE -->
+                   
+                        <div class="topImg">
+                            <img class="cat-img" src="img/TarsierInfo.png" alt="">
+                            <h3 class="cat-quote">"I am Tarsier. I like to climb and I always look grumpy."</h3>
+                        </div>
+
+
+                    <!-- INFO-->
+                        <div class="botCatInfo">
+                            
+
+                                <label>NAME:<input type="text" placeholder="Tarsier" readonly></label>
+                                <label>GENDER:<input type="text" placeholder="Female" readonly></label>
+                                <label>AGE:<input type="text" placeholder="2 years old" readonly></label>
+                                <label>STATUS:<input type="text" placeholder="Healthy" readonly></label>
+                                <label>USUALLY SEEN:<input type="text" placeholder="ST GROUNDS" readonly></label>
+                    
+                        
+                            
+                        </div>
+
+
+                        <div class="backbtn">
+                            <button onclick="closePopup()">Back</button>
+     
+                         </div>
+
                 </div>
-                <div class="cat">
-                    <img class="cat-cover" src="img/TarsierProfile.png" alt="">
-                    <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
-                    <input type="text" class="cat-info" placeholder="Female" readonly>
-                </div>
-                <div class="cat">
-                    <img class="cat-cover" src="img/TarsierProfile.png" alt="">
-                    <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
-                    <input type="text" class="cat-info" placeholder="Female" readonly>
-                </div>
-                <div class="cat">
-                    <img class="cat-cover" src="img/TarsierProfile.png" alt="">
-                    <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
-                    <input type="text" class="cat-info" placeholder="Female" readonly>
-                </div>
-                <div class="cat">
-                    <img class="cat-cover" src="img/TarsierProfile.png" alt="">
-                    <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
-                    <input type="text" class="cat-info" placeholder="Female" readonly>
-                </div>
-                <div class="cat">
-                    <img class="cat-cover" src="img/TarsierProfile.png" alt="">
-                    <input type="text" class="cat-info"  placeholder="Tarsier" readonly>
-                    <input type="text" class="cat-info" placeholder="Female" readonly>
-                </div> -->
+                 
             </div>
         </section>
 
@@ -121,5 +99,28 @@
            </div>
             
          </footer>
+
+
+
+
+         <!--JAVASCRIPT-->
+
+            
+            <script>
+
+                //POPUP SECTION
+
+                let popup = document.getElementById("popup");
+
+                function openPopup(){
+                    popup.classList.add("open-popup");
+                }
+
+                function closePopup(){
+                    popup.classList.remove("open-popup");
+                }
+
+            </script>
+
     </body>
 </html>
