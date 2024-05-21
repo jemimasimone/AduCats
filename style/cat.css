@@ -185,13 +185,14 @@ body{
 
 /*container ng indiv posa*/
 .cat{
-    display: flex;
-    flex-direction: column;
+    margin:20px;
+
     align-items: center;
     margin-bottom: 25px;
 
 
 }
+
 
 /*picture ng indiv posa*/
 .cat-cover{
