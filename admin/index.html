@@ -8,16 +8,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- LINKS -->
         <link rel="stylesheet" href="../admin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- NAVIGATION BAR -->
         <nav>
             <ul class="nav_link">
-                <img class="logo" src="" alt="AdU Cats">
-                <li>Cat Profiles</li>
-                <li>Adoption Request</li>
-                <li>Donate</li>
-                <li>Logout</li>
+                <div class="nav-links">
+                    <img src="img/Cat-1.png" alt="logo_cat">
+                    <h1>AduCats</h1>
+                    <li>Cat Profiles</li>
+                    <li>Adoption Request</li>
+                    <li>Donate</li>
+                    <button class="logout-btn" type="submit">Logout</button>
+                </div>
             </ul>
         </nav>
 
@@ -28,56 +34,46 @@
             <div class="row">
                 <!-- CATS -->
                 <div class="dashboard-box">
-                    No. of Campus Cats: 23
+                    <h3>Total No. of Campus Cats</h3>
+                </div>
+
+                <!-- DONATIONS -->
+                <div class="dashboard-box">
+                    <h3>Total No. of Donations</h3>
                 </div>
 
                 <!-- ADOPTIONS -->
                 <div class="dashboard-box">
-                    New Adoption Applications: 7
-                </div class="dashboard-box">
-
-                <!-- DONATIONS -->
-                <div class="dashboard-box">
-                    New Donation Submissions: 36
+                    <h3>Total No. of Adoptions</h3>
                 </div>
+            </section>
+
             </div>
 
-            <!-- ROW 2: DATES -->
-            <div class="row">
-                <h2>Dates</h2>
-                <!-- CALENDAR -->
-                <div class="calendar">
+            <section class="dashboard-lower">
+                <!-- ROW 2: DONATION -->
+                <div class="row-donation">
+                    <!-- MONTHLY DONATION GRAPH -->
+                    <div class="donation">
+                        <h3>Monthly Donations</h3>
+                        
+                    </div>
 
+                    <!-- KINDS OF DONATION -->
+                    <div class="donation-kinds">
+                        <h3>Donation Kinds</h3>
+
+                    </div>
                 </div>
 
-                <!-- EVENTS -->
-                <div class="events">
+                <!-- ROW 3: ADOPTION -->
+                <div class="row-adoption">
+                    <!-- MONTHLY ADOPTION GRAPH -->
+                    <div class="adoption">
+                        <h3>Adoption</h3>
 
+                    </div>
                 </div>
-            </div>
-
-            <!-- ROW 3: ADOPTION -->
-            <div class="row">
-                <h2>Adoption</h2>
-                <!-- MONTHLY ADOPTION GRAPH -->
-                <div class="adoption">
-
-                </div>
-            </div>
-
-            <!-- ROW 4: DONATION -->
-            <div class="row">
-                <h2>Donation</h2>
-                <!-- MONTHLY DONATION GRAPH -->
-                <div class="donation">
-
-                </div>
-
-                <!-- KINDS OF DONATION -->
-                <div class="donation-kinds">
-
-                </div>
-            </div>
-        </section>
+            </section>
     </body>
 </html>

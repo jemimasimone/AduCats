@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'Dongle', sans-serif;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 body{
     background-color: #a3cef1;
@@ -16,7 +18,7 @@ body{
     justify-content: center;
 }
 
-.login-container{
+/* .login-container{
     background-color: #274c77;
     width: 100vh;
     height: 60vh;
@@ -26,14 +28,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 h1{
     font-size: 48px;
-    padding-bottom: 25px;
 }
 
-form{
+/* form{
     display: flex;
     flex-direction: column;
 }
@@ -55,7 +56,7 @@ input{
     border: #a3cef1;
     color: #e7ecef;
     margin: 15px 0px;
-}
+} */
 
 nav{
     padding: 5px;
@@ -63,15 +64,15 @@ nav{
     height: 10vh;
     background-color: #274c77;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .nav_link{
     list-style: none;
-    display: flex;
 }
 
 .nav_link li {
-    padding: 15px 50px;
+    padding: 15px 130px;
 }
 
 .logo{
@@ -79,37 +80,97 @@ nav{
 }
 
 .dashboard{
-    margin: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15px;
 }
 
 .row{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
-    background-color: #6096ba;
+    justify-content: space-evenly;
+    /* background-color: #6096ba; */
     width: 100%;
     height: 100%;
     margin-bottom: 15px;
 }
 
 .dashboard-box{
-    background-color: #F49300;
-    color: #4A3432;
-    width: 300px;
-    height: 50px;
+    background-color: #8cacc8;
+    width: 250px;
+    height: 175px;
     margin: 15px;
     padding: 10px;
     display: flex;
-    align-items: center;
+    border-radius: 10px;
+    color: #FFFF;
+    font-size: 13px;
+    justify-content: center;
 }
 
-.calendar, .events, .adoption, .donation, .donation-kinds{
-    background-color: #F49300;
-    width: 700px;
-    height: 300px;
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo{
+    display: flex;
+}
+.logout-btn{
+    width: 126px;
+    height: 39px;
+    background-color: #FCFCF0;
+    border: #FCFCF0;
+    border-radius: 4px;
+    color: #F49300;
+    margin: 15px 0px;
+    font-size: 20px;
+}
+.row-donation{
+    display: flex;
+    justify-content: center;
+}
+.donation{
+    background-color: #8cacc8;
+    width: 650px;
+    height: 370px;
     margin: 15px;
-
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    color: #FFFF;
+    font-size: 20px;
+    justify-content: center;
+}
+.donation-kinds{
+    background-color: #8cacc8;
+    width: 650px;
+    height: 370px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    color: #FFFF;
+    font-size: 20px;
+    justify-content: center;
+}
+.row-adoption{
+    background-color: #8cacc8;
+    width: 650px;
+    height: 370px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    color: #FFFF;
+    font-size: 20px;
+    justify-content: center;
+}
+.dashboard-lower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
 }
