@@ -1,0 +1,30 @@
+<!-- Pangcheck toh if naka log in ka sa system -->
+<?php include 'php/sessioncheck.php'; ?>
+<!-- Naka "1" sya kase chinecheck nya if customer ka, kapag admin ka pwede parin -->
+<?php check_user_role(1); ?> <!-- "1" nakalagay kase may restriction, bawal sya makapunta sa admin side -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forgot Password | AdU Cats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <div class="login_content">
+        <div class="right_side">
+            <div class="login_container">
+                <h2>Forgot Password</h2>
+                <form action="php/send_otp.php" method="POST">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button class="login_button" type="submit">Submit</button>
+                </form>
+                <p><a href="login.html">Back to Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
