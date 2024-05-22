@@ -19,83 +19,147 @@
             <img src="img/Cat-2.png" alt="logo_cat">
             <h1>Donation</h1>
         </header>
-            <div class="hline"></div>
-        <form action=""></form>
-        <section class="upper">
-            <h3>Donor</h3>
-                <div class="grid-container">
-                    <div class="row-radio">
-                        <label for="red" class="no-click">Input Information</label>
-                        <input type="radio" id="red" name="donor-info" value="red">
-                        
-                        <label for="green" class="no-click">Anonymous</label>
-                        <input type="radio" id="green" name="donor-info" value="green">
-                      </div>
+        <div class="hline"></div>
+        <section class="">
+            <form action="php/donation.php" method="post">
+                <div class="upper">
+                    <h3>Donor</h3>
+                    <div class="grid-container">
+                        <div class="row-radio">
+                            <label class="no-click">Input Information</label>
+                            <input type="radio" id="input-info" name="donor-info" value="Input">
+                            
+                            <label class="no-click">Anonymous</label>
+                            <input type="radio" id="anonymous-info" name="donor-info" value="Anonymous">
+                        </div>
 
-                    <div class="row">
-                        <input type="text" id="name" placeholder="Name">
-                        <input type="text" id="emailAddress" placeholder="Email Address">
-                    </div>
-                    
-                    <div class="row">
-                        <input type="text" id="phoneNumber" pattern="[0-9]{11}" placeholder="Phone Number" title="PLease enter a valid 11-digit phone number">
+                        <div class="row">
+                            <input type="text" id="name" placeholder="Name" name="name" disabled>
+                            <input type="text" id="emailAddress" placeholder="Email Address" name="email" disabled>
+                        </div>
+                        
+                        <div class="row">
+                            <input type="text" id="phoneNumber"  name="contactno" pattern="[0-9]{11}" placeholder="Phone Number" title="Please enter a valid 11-digit phone number" disabled>
+                        </div>
                     </div>
                 </div>
 
-        </section>
-        <section class="lower">
-            <h3>Donated</h3>
-                <div class="grid-container">
-                    <div class="row-radio">
-                        <label for="red" class="no-click">Cash</label>
-                        <input type="radio" id="red" name="donor-info" value="red">
+                <div class="lower">
+                    <h3>Donated</h3>
+                    <div class="grid-container">
+                        <div class="row-radio">
+                            <label class="no-click">Cash</label>
+                            <input type="radio" id="cash" name="donation-info" value="Cash">
+                            
+                            <label class="no-click">Goods</label>
+                            <input type="radio" id="goods" name="donation-info" value="Goods">
+                        </div>
+
+                        <div class="row">
+                            <input type="text" id="amount" name="amount"  placeholder="Amount" disabled>
+                            <input type="text" id="info-input" name="goods" placeholder="Goods" disabled>
+                        </div>
+
+                        <div class="row">
+                            <select name="mop" id="mop" name="mot" class="small-input" disabled>
+                                <option value="">Mode of Transaction</option>
+                                <option value="cash">Cash</option>
+                                <option value="gcash">Gcash</option>
+                            </select>
+                        </div>
                         
-                        <label for="green" class="no-click">Goods</label>
-                        <input type="radio" id="green" name="donor-info" value="green">
-                      </div>
-                        
-
-                    <div class="row">
-                        <input type="text" id="amount" placeholder="Amount">
-                        <input type="text" id="info-input" placeholder="Input">
-                    </div>
-
-
-                    <div class="row">
-                        <select name="mop" id="mop" class="small-input">
-                            <option value="">Mode of Transaction</option>
-                            <option value="cash">Cash</option>
-                            <option value="gcash">Gcash</option>
-                        </select>
-                    </div>
-                    
-                    <div class="row">
-                        <input type="text" id="name" placeholder="Name of Receiver">
+                        <div class="row">
+                            <input type="text" id="receiverName" name="receiver" placeholder="Name of Receiver" disabled>
+                        </div>
                     </div>
                 </div>
+
+                <div class="submit-btn">
+                    <button class="submit" type="submit" name="donation_form">SUBMIT</button>
+                </div>
+            </form>
         </section>
-    </form>
-    <div class="submit-btn">
-        <button class="submit">SUBMIT</button>
-    </div>
+
     <script>
-        const genderSelect = document.getElementById('mop');
-        const registerForm = document.querySelector('form'); // Assuming your form has a tag
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputInfoRadio = document.getElementById('input-info');
+            const anonymousInfoRadio = document.getElementById('anonymous-info');
+            const cashRadio = document.getElementById('cash');
+            const goodsRadio = document.getElementById('goods');
 
-        registerForm.addEventListener('submit', function(event) {
-        const selectedGender = genderSelect.value;
-        if (selectedGender === "") {
-            event.preventDefault(); // Prevent form submission
-            alert("Please select your role.");
-        }
-        });
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('emailAddress');
+            const phoneInput = document.getElementById('phoneNumber');
+            const amountInput = document.getElementById('amount');
+            const infoInput = document.getElementById('info-input');
+            const mopSelect = document.getElementById('mop');
+            const receiverNameInput = document.getElementById('receiverName');
 
-        document.getElementById('mop').addEventListener('change', function() {
-        if (this.value) {
-            this.style.color = 'black';
-        } else {
-            this.style.color = '#757575'; // default color for the placeholder
-        }
+            inputInfoRadio.addEventListener('change', toggleDonorInfo);
+            anonymousInfoRadio.addEventListener('change', toggleDonorInfo);
+            cashRadio.addEventListener('change', toggleDonationInfo);
+            goodsRadio.addEventListener('change', toggleDonationInfo);
+
+            function toggleDonorInfo() {
+                if (inputInfoRadio.checked) {
+                    nameInput.disabled = false;
+                    emailInput.disabled = false;
+                    phoneInput.disabled = false;
+
+                    nameInput.hidden = false;
+                    emailInput.hidden = false;
+                    phoneInput.hidden = false;
+                } else {
+                    nameInput.disabled = true;
+                    emailInput.disabled = true;
+                    phoneInput.disabled = true;
+
+                    nameInput.hidden = true;
+                    emailInput.hidden = true;
+                    phoneInput.hidden = true;
+
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    phoneInput.value = '';
+                }
+            }
+
+
+            function toggleDonationInfo() {
+                receiverNameInput.disabled = false;
+                if (cashRadio.checked) {
+                    amountInput.disabled = false;
+                    amountInput.hidden = false;
+                    mopSelect.disabled = false;
+                    mopSelect.hidden = false;
+                    infoInput.disabled = true;
+                    infoInput.hidden = true;
+                    infoInput.value = '';
+                } else if (goodsRadio.checked) {
+                    infoInput.disabled = false;
+                    infoInput.hidden = false;
+                    amountInput.disabled = true;
+                    amountInput.hidden = true;
+                    amountInput.value = '';
+                    mopSelect.disabled = true;
+                    mopSelect.hidden = true;
+                    mopSelect.value = '';
+                } else {
+                    amountInput.disabled = true;
+                    amountInput.hidden = true;
+                    amountInput.value = '';
+                    mopSelect.disabled = true;
+                    mopSelect.hidden = true;
+                    mopSelect.value = '';
+                    infoInput.disabled = true;
+                    infoInput.hidden = true;
+                    infoInput.value = '';
+                }
+            }
+
+            // Initial state
+            toggleDonorInfo();
+            toggleDonationInfo();
         });
     </script>
     </body>

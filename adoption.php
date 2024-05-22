@@ -65,7 +65,7 @@ if (isset($_POST['submit_adoption'])) {
     <div class="hline"></div>
     <section>
         <form action="adoption.php" method="post">
-            <div class="upper">
+            <div>
                 <h3>Adopter</h3>
                 <div class="grid-container">
                     <div class="row">
@@ -92,7 +92,7 @@ if (isset($_POST['submit_adoption'])) {
                 </div>
             </div>
 
-            <div class="middle">
+            <div>
                 <h3>Cat</h3>
                 <div class="grid-container">
                     <div class="row">
@@ -115,7 +115,7 @@ if (isset($_POST['submit_adoption'])) {
                             }
 
                             // Free result set and close statement
-                            $result->free_result();
+                            // $result->free_result();
                             $stmt->close();
                             ?>
                         </select>
@@ -123,17 +123,17 @@ if (isset($_POST['submit_adoption'])) {
                 </div>
             </div>
 
-            <div class="lower">
+            <div>
                 <h3>Message</h3>
                 <div class="grid-container">
                     <div class="row">
-                        <input type="text" id="messageEmail" placeholder="Email Address">
+                        <input type="text" id="messageEmail" name="emailadd" placeholder="Email Address">
                     </div>
                     <div class="row">
-                        <input type="text" id="subject" placeholder="Subject">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
                     </div>
                     <div class="row">
-                        <textarea class="comments">Comments</textarea>
+                        <textarea class="comments" name="comments">Comments</textarea>
                     </div>
                 </div>
             </div>
