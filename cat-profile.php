@@ -52,12 +52,13 @@
                             $birthdate = $row['birthdate'];
                             $age = date_diff(date_create($birthdate), date_create('today'))->y;
                             $image = $row['catImg'];
+                            $adoptStat = $row['adoptionStatus'];
                             $adjustedImagePath = str_replace('../img/', 'img/', $image);
 
                             echo '
                             <div class="cat">
                                 <div class="catindiv">
-                                    <a onclick="openPopup(\'' . $catName . '\', \'' . $gender . '\', \'' . $age . ' years old\', \'' . $healthStatus . '\', \'' . $usuallySeen . '\', \'' . $adjustedImagePath . '\')">
+                                    <a onclick="openPopup(\'' . $catName . '\', \'' . $gender . '\', \'' . $age . ' years old\', \'' . $healthStatus . '\', \'' . $usuallySeen . '\', \'' . $adjustedImagePath . '\', \'' . $adoptStat . '\')">
                                         <img class="cat-cover" src="' . $adjustedImagePath . '" alt="">
                                     </a>
                                     <input type="text" class="cat-info" value="' . $catName . '" readonly>
@@ -85,6 +86,7 @@
                 <label>AGE: <input type="text" id="popupAge" readonly></label>
                 <label>STATUS: <input type="text" id="popupHealth" readonly></label>
                 <label>USUALLY SEEN: <input type="text" id="popupPlace" readonly></label>
+                <label>ADOPTION STATUS: <input type="text" id="popupAdopt" readonly></label>
             </div>
             <div class="backbtn">
                 <button onclick="closePopup()">Back</button>
@@ -93,12 +95,13 @@
 
         <!-- JAVASCRIPT -->
         <script>
-            function openPopup(name, gender, age, health, place, img) {
+            function openPopup(name, gender, age, health, place, img, stat) {
                 document.getElementById("popupName").value = name;
                 document.getElementById("popupGender").value = gender;
                 document.getElementById("popupAge").value = age;
                 document.getElementById("popupHealth").value = health;
                 document.getElementById("popupPlace").value = place;
+                document.getElementById("popupAdopt").value = stat;
                 document.getElementById("popupImg").src = img;
                 document.getElementById("popup").classList.add("open-popup");
             }

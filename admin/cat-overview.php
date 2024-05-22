@@ -63,7 +63,7 @@
                                     </a>
                                     <input type="text" class="cat-info" value="' . $catName . '" readonly>
                                     <input type="text" class="cat-info" value="' . $gender . '" readonly>
-                                    <button onclick="editCat(\'' . $catID . '\', \'' . $catName . '\', \'' . $gender . '\', \'' . $birthdate. '\', \'' . $healthStatus . '\', \'' . $usuallySeen . '\', \'' . $image . '\')">Edit</button>
+                                    <button onclick="editCat(\'' . $catID . '\', \'' . $catName . '\', \'' . $gender . '\', \'' . $birthdate. '\', \'' . $healthStatus . '\', \'' . $usuallySeen . '\', \'' . $image . '\', \'' . $adoptStat . '\')">Edit</button>
                                 </div>
                             </div>';
                         }
@@ -96,7 +96,7 @@
 
         <!-- POPUP edit form -->
         <div class="popup" id="editForm">
-            <form action="update_cat.php" method="post">
+            <form action="../php/update_cat.php" method="post" enctype="multipart/form-data">
                 <div class="botCatInfo">
                     <label>NAME: <input type="text" id="editName" name="editName" required></label>
                     <label for="">Gender:</label>
@@ -107,16 +107,34 @@
                     <label>BIRTHDATE: <input type="date" id="editAge" name="editAge" required></label>
                     <label>STATUS: <input type="text" id="editHealth" name="editHealth" required></label>
                     <label>USUALLY SEEN: <input type="text" id="editPlace" name="editPlace" required></label>
+                    <label for="">Adoption Status:</label>
+                    <select id="editAdopt" name="editAdopt">
+                        <option value="For adoption">For adoption</option>
+                        <option value="Not for adoption">Not for adoption</option>
+                    </select>
                 </div>
                 <div class="cat_image">
-                    <label for="">Replace Cat Image</label><input type="file" accept="image/*" name="images[]" required>
+                    <label for="">Replace Cat Image</label><input type="file" accept="image/*" name="catImage">
                 </div>
                 <input type="hidden" id="editCatID" name="editCatID">
                 <div class="backbtn">
                     <button type="submit">Save Changes</button>
                     <button type="button" onclick="cancelEdit()">Cancel</button>
+                    <button type="button" onclick="confirmArchive()">Archive</button>
                 </div>
             </form>
+        </div>
+
+        <!-- POPUP confirm archive -->
+        <div class="popup" id="confirmArchivePopup">
+            <div class="confirmArchiveContent">
+                <p>Are you sure you want to archive this cat?</p>
+                <form action="../php/archive_cat.php" method="post">
+                    <input type="hidden" id="archiveCatID" name="archiveCatID">
+                    <button type="submit">Yes</button>
+                    <button type="button" onclick="closeArchivePopup()">No</button>
+                </form>
+            </div>
         </div>
 
 
@@ -137,12 +155,13 @@
                 document.getElementById("popup").classList.remove("open-popup");
             }
 
-            function editCat(id, name, gender, birthdate, health, place, img) {
+            function editCat(id, name, gender, birthdate, health, place, img, stat) {
                 document.getElementById("editName").value = name;
                 document.getElementById("editGender").value = gender;
                 document.getElementById("editAge").value = birthdate;
                 document.getElementById("editHealth").value = health;
                 document.getElementById("editPlace").value = place;
+                document.getElementById("editAdopt").value = stat;
                 document.getElementById("editCatID").value = id;
                 document.getElementById("editForm").classList.add("open-popup");
             }
@@ -152,6 +171,16 @@
                 // // Hide the edit form
                 // document.getElementById("editForm").style.display = "none";
                 document.getElementById("editForm").classList.remove("open-popup");
+            }
+
+            function confirmArchive() {
+                const catID = document.getElementById("editCatID").value;
+                document.getElementById("archiveCatID").value = catID;
+                document.getElementById("confirmArchivePopup").classList.add("open-popup");
+            }
+
+            function closeArchivePopup() {
+                document.getElementById("confirmArchivePopup").classList.remove("open-popup");
             }
         </script>
     </body>

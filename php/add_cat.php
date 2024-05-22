@@ -87,5 +87,5 @@ $conn->close();
 <script>
     alert("Campus cat has been successfully added");
     // Redirect to login page
-    window.location.href = "../admin/index.html";
+    window.location.href = "../admin/cat-overview.php";
 </script>
