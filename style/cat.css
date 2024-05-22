@@ -307,7 +307,7 @@ body{
     width: 25rem;
     background-color: #47494D;
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     letter-spacing: 3px;
