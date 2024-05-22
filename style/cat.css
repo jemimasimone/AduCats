@@ -167,41 +167,49 @@ body{
 .overview{
     margin: 50px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    
+    
 ;
 }
 
 /*container ng ibat ibang posa*/
 .cat-table{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Two columns */
-    grid-template-rows: repeat(2, minmax(0, 1fr)); /* Three rows with equal height */
-    gap: 20px;
+    display: flex;
     margin: 0 auto;
     margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 ;
 }
 
 /*container ng indiv posa*/
 .cat{
-    margin:20px;
-
     align-items: center;
-    margin-bottom: 25px;
+    margin:3rem;
 
+}
 
+.catindiv{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    
 }
 
 
 /*picture ng indiv posa*/
 .cat-cover{
     width:15rem;
+    height: 15rem;
+    object-fit: cover;
     margin-bottom: 25px;
     border-radius: 180px;
     border: solid 5px #F2F2F2;
     box-shadow: 0 4px 10px #47494D;
     cursor: pointer;
+   
 
 }
 
@@ -227,15 +235,24 @@ body{
 
 /*responsiveness ng Cat Pictures*/
 @media (max-width:1200px){
+  
+
+
+
+
     .cat{
-        width: 15rem;
-        height: fit-content;
+   
+        width: 13rem;
+        height: 13rem;
+        object-fit: cover;
         transition: 0.5s;
        
     }
 
     .cat-cover{
-        width: 11rem;
+        width: 13rem;
+        height: 13rem;
+        object-fit: cover;
     }
 
     .cat-info{
@@ -245,14 +262,17 @@ body{
 
 @media (max-width:800px){
     .cat{
-        width: 11rem;
-        height: fit-content;
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
         transition: 0.5s;
        
     }
 
     .cat-cover{
-        width: 8rem;
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
     }
 
     .cat-info{
@@ -295,7 +315,7 @@ body{
     align-items: center;
     justify-content: center;
     top: 20%;
-    left: 35rem;
+    left: 38%;
     box-shadow: 0 4px 10px #47494D;
 
     transform: translate( 5%, -77%) scale(0.1);
@@ -315,8 +335,9 @@ body{
 @media (max-width:1200px) {
     .popup{
         width: 25rem;
-        position: relative;
-        left:0;
+        position: fixed;
+        top:30%;
+        left:30%;
     }
 
     .botCatInfo{
@@ -333,13 +354,14 @@ body{
 @media (max-width:800px) {
 
 .popup{
-    width: 20rem;
-    position: relative;
-    left:-35%;
+    position: fixed;
+    justify-content: center;
+    top:40%;
+    left: 16%;
 }
 
 .botCatInfo{
-    width: 15rem;
+    width: fit-content;
 
     
 }
@@ -381,10 +403,13 @@ body{
     margin-top: -8rem;
     display: flex;
     flex-direction: column;
+
 }
 
 .cat-img{  
     width:10rem;
+    height:10rem;
+    object-fit: cover;
     margin-bottom: 10px;
     border-radius: 180px;
     border: solid 5px #F49300;
@@ -392,16 +417,7 @@ body{
     align-self: center;
 }
 
-/*Quote ng posa*/
 
-
-.cat-quote{
-    font-size: 20px;
-    color: #FCFCF0;;
-    border: transparent;
-    text-align: center;
-    margin: 10px;
-}
 
 /*yung puting box*/
 
@@ -423,7 +439,6 @@ body{
     font-weight: bolder;
     width: 15rem;
     display: flex;
-    align-items: baseline;
     letter-spacing: 0;
     
     
@@ -437,18 +452,13 @@ input[type='text']:not(.cat-info){
     border: transparent;
     line-height: 2;
     margin-left: 1rem;
+    font-weight: bold;
+    color: #F49300;
+    letter-spacing: 1px;
+
 
     
  
-}
-/*yung input na text infos ng pusa*/
-.botCatInfo input::placeholder{
-    color: #F49300;
-    letter-spacing: 1px;
-    font-weight: bolder;
-    width: fit-content;
-
-
 }
 
 
