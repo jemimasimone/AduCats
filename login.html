@@ -18,28 +18,22 @@
 
             <!-- LEFT SIDE: POSA -->
             <div class="left_side">
-     
                     <img class="img_size" id ="logo"src="img/AduCatsLogo.png" alt="">
-                    <img class="img_size" id="paula" src="img/PaulaLogin.png" alt="">
-            
-                    
+                    <img class="img_size" id="paula" src="img/PaulaLogin.png" alt="">                            
             </div>
-
             <!-- RIGHT SIDE: LOGIN FORM -->
               <div class="right_side"> 
                   <div class="login_container">
                       <img src="img/WelcomeLogin.png">
-                        <form action="">
-                            <input type="text" placeholder="Username">
-                            <input type="text" placeholder="Password">
+                        <form action="php/login.php" method="POST">
+                            <input type="text" name="username" placeholder="Username" required>
+                            <input type="password" name="password" placeholder="Password" required>
                             <button class="login_button">Login</button>
                         </form>
-                        <a href="">Forgot Password?</a>
-                        <p>New user? Sign up <a href="">here</a>.</p>
+                        <a href="forgot_password.php">Forgot Password?</a>
+                        <p>New user? <a href="register.html"> Sign up here</a>.</p>
                      </div>
-
                 </div>
-        
             </div>
     </body>
 </html>
