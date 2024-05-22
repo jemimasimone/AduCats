@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Admin | AdU Cats</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- LINKS -->
+        <link rel="stylesheet" href="../admin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <ul class="nav_link">
+                <div class="nav-links">
+                    <img src="img/Cat-1.png" alt="logo_cat">
+                    <h1>AduCats</h1>
+                    <li>Cat Profiles</li>
+                    <li>Adoption Request</li>
+                    <li>Donate</li>
+                    <button class="logout-btn" type="submit">Logout</button>
+                </div>
+            </ul>
+        </nav>
+
+        <!-- CONTENT -->
+        <section class="content">
+            <div class="form_box">
+                <form class="cat_form" action="../php/add_cat.php" method="post" enctype="multipart/form-data">
+                    <label for="">Cat Name:</label><input type="text" name="name" required>
+                    <label for="">Gender:</label>
+                        <select name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    <label for="">Birthdate:</label><input type="date" name="birthdate" required>
+                    <label for="">Health Status:</label><input type="text" name="health" required>
+                    <label for="">Usually Seen:</label><input type="text" name="place" required>
+                    <label for="">Adoption Status:</label>
+                        <select name="adoption">
+                            <option value="adopt">For Adoption</option>
+                            <option value="noadopt">Not for adoption</option>
+                        </select>
+                    <div class="cat_image">
+                        <label for="">Cat Images</label><input type="file" accept="image/*" name="images[]" required>
+                    </div>
+                    <button class="add_button" type="submit" name="add_cat">Add Cat</button>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
