@@ -80,8 +80,8 @@
             <label>Requested On: <input type="text" id="popupDate" readonly></label>
         </div>
         <div class="backbtn">
-            <button onclick="closePopup()">Back</button>
             <button type="button" onclick="response()">Response</button>
+            <button onclick="closePopup()">Back</button>
         </div>
     </div>
 

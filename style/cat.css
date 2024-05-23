@@ -213,6 +213,8 @@ body{
     background-color: #4A3432;
     height: 250px;
     width: 250px;
+    padding: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     height: fit-content;

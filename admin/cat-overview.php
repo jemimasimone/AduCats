@@ -118,8 +118,8 @@
                 <input type="hidden" id="editCatID" name="editCatID">
                 <div class="backbtn">
                     <button type="submit">Save Changes</button>
-                    <button type="button" onclick="cancelEdit()">Cancel</button>
                     <button type="button" onclick="confirmArchive()">Archive</button>
+                    <button type="button" onclick="cancelEdit()">Cancel</button>
                 </div>
             </form>
         </div>
