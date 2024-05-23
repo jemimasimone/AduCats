@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'php/dbconnection.php';
 include 'php/sessioncheck.php';
 check_user_role(1);
@@ -125,7 +124,10 @@ if (isset($_POST['submit_adoption'])) {
 
 <body>
     <header class="logo">
-        <img src="img/Cat-2.png" alt="logo_cat">
+        <a href="homepage.php">
+            <img src="img/Cat-2.png" alt="logo_cat">
+            
+        </a>
         <h1>Adoption</h1>
     </header>
     <div class="hline"></div>

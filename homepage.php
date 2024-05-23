@@ -25,7 +25,7 @@ check_user_role(1);
 
         <div class="left-navbar">
             <a href="adoption.php">Adoption Request</a> 
-            <a href="donation.html">Donate</a> 
+            <a href="donation.php">Donate</a> 
         </div>
         
         <img id="AduCatsLogo" src ="img/AduCatsLogo.png">
@@ -103,7 +103,7 @@ check_user_role(1);
     <div class="right-side-container">
         <h2>Support our University Cats by ensuring they're well-fed and healthy!</h2>
         <p>Your donation helps us provide essential care for our University Cats, ensuring they stay healthy and happy. Support our cause today and make a difference in the lives of these beloved feline companions!</p>
-        <a href="donation.html"><button>Donate</button></a>
+        <a href="donation.php"><button>Donate</button></a>
     </div>
 
   </section>

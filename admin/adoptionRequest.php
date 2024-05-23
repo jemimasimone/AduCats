@@ -18,14 +18,15 @@ check_user_role(2);
     <!-- NAVIGATION -->
     <nav class="nav_bar">
         <div class="left-navbar">
-            <a href="index.html">Home</a>
+            <a href="dashboard.php">Home</a>
             <a href="cat-overview.php">Cat Profiles</a>
             <a href="adoptionRequest.php">Adoption Request</a> 
             <a href="donationForm.php">Donation Form</a> 
         </div>
         <img id="AduCatsLogo" src ="../img/AduCatsLogoWhite.png">
         <div class="right-navbar">
-            <a href=""><button>Logout</button></a>
+                <button class="logout-btn"><a href="../homepage.php">Customer Side</a></button>
+                <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
         </div>
     </nav>
        

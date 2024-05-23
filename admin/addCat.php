@@ -31,7 +31,8 @@ check_user_role(2);
             <img id="AduCatsLogo" src ="../img/AduCatsLogoWhite.png">
             
             <div class="right-navbar">
-                <a href=""><button>Logout</button></a>
+                <button class="logout-btn"><a href="../homepage.php">Customer Side</a></button>
+                <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
             </div>
            
           </nav>

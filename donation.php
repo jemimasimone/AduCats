@@ -21,7 +21,7 @@ check_user_role(1);
 
     <body>
         <header class="logo">
-            <img src="img/Cat-2.png" alt="logo_cat">
+            <a href="homepage.php"><img src="img/Cat-2.png" alt="logo_cat"></a>
             <h1>Donation</h1>
         </header>
         <div class="hline"></div>

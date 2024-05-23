@@ -1,6 +1,6 @@
 <?php
 require '../php/dbconnection.php';
-include 'php/sessioncheck.php';
+include '../php/sessioncheck.php';
 check_user_role(2);
 
 // Fetch total number of cats
@@ -62,7 +62,7 @@ while ($row = $donation_types_result->fetch_assoc()) {
     <nav>
         <ul class="nav_link">
             <div class="nav-links">
-                <img src="img/Cat-1.png" alt="logo_cat">
+                <img src="../img/Cat-1.png" alt="logo_cat">
                 <h1>AduCats</h1>
                 <a href="cat-overview.php"><li>Cat Profiles</li></a>
                 <a href="adoptionRequest.php"><li>Adoption Requests</li></a>

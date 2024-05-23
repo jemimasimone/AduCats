@@ -25,24 +25,19 @@ check_user_role(1);
         <nav class="nav_bar">
 
             <div class="left-navbar">
-                <a href="adoption.html">Adoption Request</a> 
-                <a href="donation.html">Donate</a> 
+                <a href="adoption.php">Adoption Request</a> 
+                <a href="donation.php">Donate</a> 
             </div>
             
             <img id="AduCatsLogo" src ="img/AduCatsLogoWhite.png">
             
             <div class="right-navbar">
-                <a href="homepage.html">About</a> 
-                <a href="register.html"><button> Sign Up</button></a>
+                <a href="homepage.php">About</a> 
+                <a href="php/logout.php"><button>Logout</button></a>
             </div>
            
           </nav>
            
-           
-       
-            
-          </nav>
-
         <!-- SECTION: CAT OVERVIEW -->
        
         <section class="overview">
