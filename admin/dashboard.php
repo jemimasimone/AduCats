@@ -1,5 +1,7 @@
 <?php
 require '../php/dbconnection.php';
+include 'php/sessioncheck.php';
+check_user_role(2);
 
 // Fetch total number of cats
 $cat_query = "SELECT COUNT(catID) AS total_cats FROM cats";
@@ -65,7 +67,8 @@ while ($row = $donation_types_result->fetch_assoc()) {
                 <a href="cat-overview.php"><li>Cat Profiles</li></a>
                 <a href="adoptionRequest.php"><li>Adoption Requests</li></a>
                 <a href="donationForm.php"><li>Donation Forms</li></a>
-                <button class="logout-btn" type="submit">Logout</button>
+                <button class="logout-btn"><a href="../homepage.php">Customer Side</a></button>
+                <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
             </div>
         </ul>
     </nav>

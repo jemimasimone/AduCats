@@ -10,10 +10,13 @@ function redirect_with_alert($message, $location) {
     exit();
 }
 
+// Determine the correct path to login.html
+$loginPath = (strpos($_SERVER['REQUEST_URI'], '/admin/') !== false) ? '../login.html' : 'login.html';
+
 // Check if user is logged in
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_role'])) {
     // If not logged in, show an alert and redirect to login page
-    redirect_with_alert("You are not logged in. Redirecting to login page...", "login.html");
+    redirect_with_alert("You are not logged in. Redirecting to login page...", $loginPath);
 }
 
 // Function to check user role

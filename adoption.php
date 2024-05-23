@@ -1,6 +1,8 @@
 <?php
 session_start();
 require 'php/dbconnection.php';
+include 'php/sessioncheck.php';
+check_user_role(1);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 

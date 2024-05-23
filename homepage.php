@@ -1,7 +1,8 @@
-<!-- Pangcheck toh if naka log in ka sa system -->
-<?php include 'php/sessioncheck.php'; ?>
-<!-- Naka "1" sya kase chinecheck nya if customer ka, kapag admin ka pwede parin -->
-<?php check_user_role(1); ?> <!-- "1" nakalagay kase may restriction, bawal sya makapunta sa admin side -->
+<?php
+require 'php/dbconnection.php';
+include 'php/sessioncheck.php';
+check_user_role(1);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +32,14 @@
         
         <div class="right-navbar">
             <a href="cat-profile.php">Cat Profiles</a> 
-            <a href="register.html"><button> Sign Up</button></a>
+            <a href="php/logout.php"><button>Logout</button></a>
+            <?php
+            // if ($_SESSION['user_role'] == 2) {
+            //     echo '<p><a href="adminSide.php">Go to Admin side</a>.</p>';
+            // } else {
+            //     echo '<p>You do not have access to Admin side.</p>';
+            // }
+            ?>
         </div>
        
       </nav>

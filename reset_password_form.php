@@ -1,7 +1,8 @@
-<!-- Pangcheck toh if naka log in ka sa system -->
-<?php include 'php/sessioncheck.php'; ?>
-<!-- Naka "1" sya kase chinecheck nya if customer ka, kapag admin ka pwede parin -->
-<?php check_user_role(1); ?> <!-- "1" nakalagay kase may restriction, bawal sya makapunta sa admin side -->
+<?php
+require 'php/dbconnection.php';
+include 'php/sessioncheck.php';
+check_user_role(1);
+?>
 
 
 <!DOCTYPE html>
