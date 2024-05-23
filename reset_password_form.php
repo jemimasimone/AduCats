@@ -1,8 +1,4 @@
-<?php
-require 'php/dbconnection.php';
-include 'php/sessioncheck.php';
-check_user_role(1);
-?>
+
 
 
 <!DOCTYPE html>
