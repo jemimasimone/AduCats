@@ -30,13 +30,13 @@ try {
                 // Change nyo nalang yung "window.location.href = "../customerSide.php" para ma redirect yung CUSTOMER sa proper page nya. In this case, sa customer side lang sya
                 echo '<script>
                         alert("Login Successful! Welcome ' . htmlspecialchars($username) . '!");
-                        window.location.href = "../customerSide.php";
+                        window.location.href = "../homepage.php";
                       </script>';
             } elseif ($user_role == 2) {
                 // Change nyo rin toh: "window.location.href = "../adminSide.php" para ma redirect yung ADMIN sa proper page nya. In this case, sa admin side sya
                 echo '<script>
                         alert("Login Successful! Welcome ' . htmlspecialchars($username) . '!");
-                        window.location.href = "../adminSide.php";
+                        window.location.href = "../admin/dashboard.php";
                       </script>';
             } 
             exit();
