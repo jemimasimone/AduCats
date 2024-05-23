@@ -13,6 +13,7 @@ check_user_role(2);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- LINKS -->
     <link rel="stylesheet" href="../style/admin-forms.css">
+
 </head>
 <body>
     <!-- NAVIGATION -->

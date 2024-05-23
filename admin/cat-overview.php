@@ -66,7 +66,7 @@ check_user_role(2);
                                     </a>
                                     <input type="text" class="cat-info" value="' . $catName . '" readonly>
                                     <input type="text" class="cat-info" value="' . $gender . '" readonly>
-                                    <button onclick="editCat(\'' . $catID . '\', \'' . $catName . '\', \'' . $gender . '\', \'' . $birthdate. '\', \'' . $healthStatus . '\', \'' . $usuallySeen . '\', \'' . $image . '\', \'' . $adoptStat . '\')">Edit</button>
+                                    <button class="edit" onclick="editCat(\'' . $catID . '\', \'' . $catName . '\', \'' . $gender . '\', \'' . $birthdate. '\', \'' . $healthStatus . '\', \'' . $usuallySeen . '\', \'' . $image . '\', \'' . $adoptStat . '\')">Edit</button>
                                 </div>
                             </div>';
                         }
