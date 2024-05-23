@@ -12,7 +12,7 @@ check_user_role(2);
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- LINKS -->
-        <link rel="stylesheet" href="../style/cat.css">
+        <link rel="stylesheet" href="../style/cat-overview.css">
     </head>
     <body>
         <!-- NAVIGATION -->
@@ -28,7 +28,7 @@ check_user_role(2);
             <img id="AduCatsLogo" src ="../img/AduCatsLogoWhite.png">
             
             <div class="right-navbar">
-                <button class="logout-btn"><a href="../homepage.php">Customer Side</a></button>
+                <button class="customer-btn"><a href="../homepage.php">Customer Side</a></button>
                 <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
             </div>
            
@@ -38,7 +38,7 @@ check_user_role(2);
        
         <section class="overview">
             <div>
-                <a class="add" href="addCat.html">Add Cat</a>
+                <button class="add-btn"><a href="addCat.php">Add Cat</a></button>
             </div>
             <div class="cat-table">
                 <?php

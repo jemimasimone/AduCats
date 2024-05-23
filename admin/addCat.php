@@ -12,7 +12,7 @@ check_user_role(2);
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- LINKS -->
-        <link rel="stylesheet" href="../style/cat.css">
+        <link rel="stylesheet" href="../style/add-cat.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@ check_user_role(2);
         <nav class="nav_bar">
 
             <div class="left-navbar">
-                <a href="index.html">Home</a>
+                <a href="dashboard.php">Home</a>
                 <a href="cat-overview.php">Cat Profiles</a>
                 <a href="adoptionRequest.php">Adoption Request</a> 
                 <a href="donationForm.php">Donation Form</a> 
@@ -31,7 +31,7 @@ check_user_role(2);
             <img id="AduCatsLogo" src ="../img/AduCatsLogoWhite.png">
             
             <div class="right-navbar">
-                <button class="logout-btn"><a href="../homepage.php">Customer Side</a></button>
+                <button class="customer-btn"><a href="../homepage.php">Customer Side</a></button>
                 <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
             </div>
            
@@ -41,6 +41,7 @@ check_user_role(2);
         <section class="content">
             <div class="form_box">
                 <form class="cat_form" action="../php/add_cat.php" method="post" enctype="multipart/form-data">
+                    <div class="row-cat">
                     <label for="">Cat Name:</label><input type="text" name="name" required>
                     <label for="">Gender:</label>
                         <select name="gender">
@@ -48,6 +49,9 @@ check_user_role(2);
                             <option value="female">Female</option>
                         </select>
                     <label for="">Birthdate:</label><input type="date" name="birthdate" required>
+                    </div>
+
+                    <div class="row-cat">
                     <label for="">Health Status:</label><input type="text" name="health" required>
                     <label for="">Usually Seen:</label><input type="text" name="place" required>
                     <label for="">Adoption Status:</label>
@@ -55,10 +59,14 @@ check_user_role(2);
                             <option value="For adoption">For adoption</option>
                             <option value="Not for adoption">Not for adoption</option>
                         </select>
-                    <div class="cat_image">
-                        <label for="">Cat Images</label><input type="file" accept="image/*" name="images[]" required>
                     </div>
-                    <button class="add_button" type="submit" name="add_cat">Add Cat</button>
+
+                    <div class="cat-image">
+                        <label for="" class="cat-images">Cat Images</label><input type="file" accept="image/*" name="images[]" required>
+                    </div>
+                    <div class="button">
+                    <button class="add-btn" type="submit" name="add_cat">Add Cat</button>
+                    </div>
                 </form>
             </div>
         </section>
