@@ -5,85 +5,87 @@ check_user_role(1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Donate | AdU Cats</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- LINKS -->
-        <link rel="stylesheet" href="style/form.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Donate | AdU Cats</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- LINKS -->
+    <link rel="stylesheet" href="style/form.css">
 
-    <body>
-        <header class="logo">
-            <a href="homepage.php"><img src="img/Cat-2.png" alt="logo_cat"></a>
-            <h1>Donation</h1>
-        </header>
-        <div class="hline"></div>
-        <section class="">
-            <form action="php/donation.php" method="post">
-                <div class="upper">
-                    <h3>Donor</h3>
-                    <div class="grid-container">
-                        <div class="row-radio">
-                            <label class="no-click">Input Information</label>
-                            <input type="radio" id="input-info" name="donor-info" value="Input">
-                            
-                            <label class="no-click">Anonymous</label>
-                            <input type="radio" id="anonymous-info" name="donor-info" value="Anonymous">
-                        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
+</head>
 
-                        <div class="row">
-                            <input type="text" id="name" placeholder="Name" name="name" disabled>
-                            <input type="text" id="emailAddress" placeholder="Email Address" name="email" disabled>
-                        </div>
-                        
-                        <div class="row">
-                            <input type="text" id="phoneNumber"  name="contactno" pattern="[0-9]{11}" placeholder="Phone Number" title="Please enter a valid 11-digit phone number" disabled>
-                        </div>
+<body>
+    <header class="logo">
+        <a href="homepage.php"><img src="img/Cat-2.png" alt="logo_cat"></a>
+        <h1>Donation</h1>
+    </header>
+
+
+    <div class="DonateForm">
+        <form action="php/donation.php" method="post">
+            <div class="upper">
+                <h3>Donor</h3>
+                <div class="grid-container">
+                    <div class="row-radio">
+                        <label class="no-click">Input Information</label>
+                        <input type="radio" id="input-info" name="donor-info" value="Input">
+
+                        <label class="no-click">Anonymous</label>
+                        <input type="radio" id="anonymous-info" name="donor-info" value="Anonymous">
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="name" placeholder="Name" name="name" disabled>
+                        <input type="text" id="emailAddress" placeholder="Email Address" name="email" disabled>
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="phoneNumber" name="contactno" pattern="[0-9]{11}" placeholder="Phone Number" title="Please enter a valid 11-digit phone number" disabled>
                     </div>
                 </div>
+            </div>
 
-                <div class="lower">
-                    <h3>Donated</h3>
-                    <div class="grid-container">
-                        <div class="row-radio">
-                            <label class="no-click">Cash</label>
-                            <input type="radio" id="cash" name="donation-info" value="Cash">
-                            
-                            <label class="no-click">Goods</label>
-                            <input type="radio" id="goods" name="donation-info" value="Goods">
-                        </div>
+            <div class="lower">
+                <h3>Donated</h3>
+                <div class="grid-container">
+                    <div class="row-radio">
+                        <label class="no-click">Cash</label>
+                        <input type="radio" id="cash" name="donation-info" value="Cash">
 
-                        <div class="row">
-                            <input type="text" id="amount" name="amount"  placeholder="Amount" disabled>
-                            <input type="text" id="info-input" name="goods" placeholder="Goods" disabled>
-                        </div>
+                        <label class="no-click">Goods</label>
+                        <input type="radio" id="goods" name="donation-info" value="Goods">
+                    </div>
 
-                        <div class="row">
-                            <select name="mop" id="mop" name="mot" class="small-input" disabled>
-                                <option value="">Mode of Transaction</option>
-                                <option value="cash">Cash</option>
-                                <option value="gcash">Gcash</option>
-                            </select>
-                        </div>
-                        
-                        <div class="row">
-                            <input type="text" id="receiverName" name="receiver" placeholder="Name of Receiver" disabled>
-                        </div>
+                    <div class="row">
+                        <input type="text" id="amount" name="amount" placeholder="Amount" disabled>
+                        <input type="text" id="info-input" name="goods" placeholder="Goods" disabled>
+                    </div>
+
+                    <div class="row">
+                        <select name="mop" id="mop" name="mot" class="small-input" disabled>
+                            <option value="">Mode of Transaction</option>
+                            <option value="cash">Cash</option>
+                            <option value="gcash">Gcash</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="receiverName" name="receiver" placeholder="Name of Receiver" disabled>
                     </div>
                 </div>
+            </div>
 
-                <div class="submit-btn">
-                    <button class="submit" type="submit" name="donation_form">SUBMIT</button>
-                </div>
-            </form>
-        </section>
+            <div class="submit-btn">
+                <button class="submit" type="submit" name="donation_form">SUBMIT</button>
+            </div>
+        </form>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -167,5 +169,6 @@ check_user_role(1);
             toggleDonationInfo();
         });
     </script>
-    </body>
+</body>
+
 </html>
