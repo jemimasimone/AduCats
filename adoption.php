@@ -2,6 +2,7 @@
 require 'php/dbconnection.php';
 include 'php/sessioncheck.php';
 check_user_role(1);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -36,7 +37,7 @@ if (isset($_POST['submit_adoption'])) {
             throw new Exception('User not logged in.');
         }
         $id = $_SESSION['user_id'];
-        
+
         // Gather other form data
         $adopter = $_POST['name'];
         $email = $_POST['email'];
@@ -95,7 +96,6 @@ if (isset($_POST['submit_adoption'])) {
         }
 
         $conn->close();
-
     } catch (Exception $e) {
         // Rollback transaction in case of error
         $conn->rollback();
@@ -107,8 +107,13 @@ if (isset($_POST['submit_adoption'])) {
     exit();
 }
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -117,6 +122,7 @@ if (isset($_POST['submit_adoption'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- LINKS -->
     <link rel="stylesheet" href="style/form.css">
+    <link rel="icon" href="img/WhiteLogoCat.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
@@ -126,40 +132,52 @@ if (isset($_POST['submit_adoption'])) {
     <header class="logo">
         <a href="homepage.php">
             <img src="img/Cat-2.png" alt="logo_cat">
-            
         </a>
         <h1>Adoption</h1>
     </header>
-    <div class="hline"></div>
-    <section>
+
+
+
+
+    <!-- LINKS -->
+
+    <div class="AdoptForm">
         <form action="adoption.php" method="post">
             <div>
                 <h3>Adopter</h3>
                 <div class="grid-container">
                     <div class="row">
-                        <input type="text" id="name" placeholder="Name" name="name" required>
-                        <input type="email" id="emailAddress" placeholder="Email Address" name="email" required>
-                        <input type="tel" id="phoneNumber" name="contactno" pattern="[0-9]{11}" placeholder="Phone Number" title="Please enter a valid 11-digit phone number" required>
-                    </div>
-                    
-                    <div class="row">
-                        <input type="date" id="birthdate" class="small-input" placeholder="Birthdate" name="birthdate" required>
-                        <select name="gender" id="gender" class="small-input" required>
-                            <option value="">Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                    </div>
 
-                    <div class="row">
-                        <input type="text" id="address1" placeholder="Address 1 (street and barangay)" name="street" required>
-                        <input type="text" id="address2" placeholder="Address 2 (region/province)" name="province" required>
-                        <input type="text" id="address3" placeholder="Address 3 (postal code)" name="postal" required>
+                        <div class="PersonalInfo">
+                            <p>Personal Information</p>
+                            <input type="text" id="name" placeholder="Name" name="name" required>
+                            <input type="email" id="emailAddress" placeholder="Email Address" name="email" required>
+                            <input type="tel" id="phoneNumber" name="contactno" pattern="[0-9]{11}" placeholder="Phone Number" title="Please enter a valid 11-digit phone number" required>
+
+                            <input type="date" id="birthdate" class="small-input" placeholder="Birthdate" name="birthdate" required>
+                            <select name="gender" id="gender" class="small-input" required>
+                                <option value="">Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+
+                        <div class="Addresses">
+
+
+
+                            <p>Address Information</p>
+                            <input type="text" id="address1" placeholder="Address 1 (street and barangay)" name="street" required>
+                            <input type="text" id="address2" placeholder="Address 2 (region/province)" name="province" required>
+                            <input type="text" id="address3" placeholder="Address 3 (postal code)" name="postal" required>
+
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div>
+            <div class="cat">
                 <h3>Cat</h3>
                 <div class="grid-container">
                     <div class="row">
@@ -193,16 +211,19 @@ if (isset($_POST['submit_adoption'])) {
                         <input type="text" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="row">
-                        <textarea class="comments" name="comments" placeholder="Message" required></textarea>
+                        <textarea rows="10" cols="100" class="comments" name="comments" placeholder="Message" required></textarea>
                     </div>
                 </div>
-            </div>
 
+
+            </div>
             <div class="submit-btn">
                 <button class="submit" type="submit" name="submit_adoption">SUBMIT</button>
             </div>
+
+
         </form>
-    </section>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {

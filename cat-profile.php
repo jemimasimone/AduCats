@@ -17,6 +17,7 @@ check_user_role(1);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- LINKS -->
     <link rel="stylesheet" href="style/cat.css">
+    <link rel="icon" href="img/WhiteLogoCat.png">
 </head>
 
 <body>

@@ -1,152 +1,191 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 
-    font-family: "Aoboshi One", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 body{
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
-.logo h1{
-    font-size: 100px;
-  }
-  .logo{
-    display: flex;
-    color: #F49300;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .hline {
-    width: 100%;  
-    height: 3px;   
-    background-color: #F49300;
-  }
-  h3 {
-    padding: 3%;
-    color: #a6a6a6;
-    font-size: 24px;
-  }
-  .upper{
-    display: flex;
-    flex-direction: column;
-  }
-  input{
-    height: 54px;
-    width: 409px;
-    padding: 0 10px;
-    margin: 15px 0px;
-    border-color: #8F6C49;
-    border-radius: 4px;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Two columns of equal size */
-    grid-gap: 10px; /* Adjust spacing between elements */
-    margin: 0% 0% 0% 10%;
-  }
-  .row {
-    display: flex; /* Makes elements within the row side-by-side */
-    align-items: center;
-  }
-  #emailAddress{
-    margin-left: 10px;
-  }
-  #lastName{
-    margin-left: 10px;
-  }
-  #suffix{
-    margin-left: 10px;
-  }
-  #birthdate{
-    margin-left: 10px;
-  }
-  #gender{
-    margin-left: 10px;
-  }
-  #info-input{
-    margin-left: 10px;
-  }
-  .btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0% 4% 0% 0%;
-  }
-  .edit{
-    background-color: #6CCEE3;
-    width: 168px;
-    height: 76px;
-    color: #FCFCF0;
-    margin: 15px 0px;
-    border-radius: 20px;
-    border-color: transparent;
-    margin-left: 60px;
-  }
-  .changePassword{
-    background-color: #8F6C49;
-    width: 168px;
-    height: 76px;
-    color: #FCFCF0;
-    margin: 15px 0px;
-    border-radius: 20px;
-    border-color: transparent;
-  }
-
-  .submit{
-    color: #FCFCF0;
-    background-color: #F49300;
-    width: 246px;
-    height: 76px;
-    margin: 15px 0px;
-    border-radius: 20px;
-    border-color: transparent;
-  }
-  select {
-    width: 409px;
-    height: 54px;
-    padding: 0 10px;
-    border: 1px solid #8F6C49;
-    border-radius: 4px;
-    color: #757575;
-  }
-  .comments{
-    width: 1109px;
-    height: 296px;
-    border-radius: 4px;
-    padding: 0 10px;
-    margin: 15px 0px;
-    border-color: #8F6C49;
-    color: #a6a6a6;
-  }
-  .small-input {
-    width: 240px; /* Adjust width as needed */
-  }
-  .submit-btn{
-    display: flex;
-    justify-content: center;
-  }
 
 
-input[type="radio"] {
+/*LOGO*/
+
+.logo{
+  height: 8rem;
+  color: #F49300;
+  border-bottom: solid 4px #F49300;
   display: flex;
-  width: 20px;
-  height: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
-.row-radio{
-    display: flex;
-    font-size: 20px;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
+.logo img{
+  margin-top:-12px;
 }
-.no-click {
-    pointer-events: none;
-    color: #6d7d8b;
+.logo h1{
+  font-size: 4rem;
+  margin-left: 10px;
+}
+
+
+/*Adopt Form*/
+.AdoptForm{
+  display: flex;
+  justify-content: center;
+
+}
+
+.AdoptForm h3{
+  font-size: 30px;
+  letter-spacing: 2px;
+  color:#A6A6A6;
+  margin-top: 20px;
+
+}
+
+.AdoptForm p{
+  font-size: 20px;
+  letter-spacing: 2px;
+  color:#4b4b4b;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.grid-container{
+  display: flex;
+  margin:30px;
+  flex-direction: column;
+ 
+}
+
+.row{
+  display: flex;
+  width: 43rem;
+  justify-content: space-between;
+ 
+  
+}
+
+
+/*yung mga input*/
+.grid-container input{
+  height: 2rem;
+  border-radius: 5px;
+  border: 2px solid #A6A6A6;
+  width: 20rem;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+}
+
+.grid-container input::placeholder{
+  letter-spacing: 2px;
+  padding: 20px;
+  opacity: 55%;
+  
+}
+
+#birthdate{
+  letter-spacing: 2px;
+  padding: 20px;
+  color: #A6A6A6;
+  cursor: pointer;
+  border-color: #A6A6A6;
+
+}
+
+.grid-container select{
+  letter-spacing: 2px;
+  color: #A6A6A6;
+  height: 2rem;
+  padding: 0 20px 0 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.PersonalInfo{
+  margin-bottom: 20px;
+}
+
+
+
+.comments {
+  user-select: none;
+  padding: 20px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  
+}
+
+
+.comments::placeholder{
+  color: #A6A6A6;
+}
+
+
+
+.cat{
+  display: flex;
+  align-items: center;
+
+}
+
+
+.submit-btn{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-bottom: 20px;
+}
+
+
+.submit-btn button{
+  height: 3rem;
+  width: 30rem;
+  border-radius: 10px;
+  border: 0;
+  background-color: #F49300;
+  color: #f2f2f2;
+  letter-spacing: 2px;
+}
+
+.submit-btn button:hover{
+ background-color: #4b4b4b;
+ color: #f2f2f2;
+ transition: 0.2s;
+}
+
+/*Responsiveness*/
+
+@media (max-width:1200px)
+{
+  
+
+  .submit-btn button{
+    width: 20rem;
+    margin-left: -3rem;
+    transition: 0.4s;
+
   }
+
+
+}
+
+@media (max-width:900px)
+{
+  .row{
+    flex-wrap: wrap;
+    width: 20rem;
+    transition: 0.4s;
+  }
+
+
+}
+
+
