@@ -1,9 +1,10 @@
 <?php
 require 'dbconnection.php';
+include 'sessioncheck.php';
+check_user_role(1);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Replace this with the actual user ID from the session
-    $id = ''; // or use $id = $_SESSION['user_id'];
+    $id = $_SESSION['user_id'];
     
     // Check if inputs exist in the $_POST array before using them
     $donator = isset($_POST['name']) ? $_POST['name'] : null;
@@ -44,5 +45,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script>
     alert("Donation form has been successfully submitted");
     // Redirect to login page
-    window.location.href = "../homepage.html";
+    window.location.href = "../homepage.php";
 </script>
