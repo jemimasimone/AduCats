@@ -9,6 +9,7 @@ require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 if (isset($_POST['submit_adoption'])) {
+
     try {
         // Start transaction
         $conn->begin_transaction();
@@ -42,15 +43,16 @@ if (isset($_POST['submit_adoption'])) {
         $street = $_POST['street'];
         $province = $_POST['province'];
         $postal = $_POST['postal'];
+        $status = "Pending";
         $date = new DateTime();
         $adoptionDate = $date->format('Y-m-d H:i:s');
 
         // Prepare and execute insert statement
-        $stmt = $conn->prepare("INSERT INTO adoption (userID, adopterName, catID, catName, email, contactno, street, province, postal, adoptionDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO adoption (userID, adopterName, catID, catName, email, contactno, street, province, postal, adoptionDate, adoptionStatus) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         if ($stmt === false) {
             throw new Exception('Prepare statement failed: ' . htmlspecialchars($conn->error));
         }
-        $stmt->bind_param("isisssssss", $id, $adopter, $catid, $cat, $email, $contact, $street, $province, $postal, $adoptionDate);
+        $stmt->bind_param("isissssssss", $id, $adopter, $catid, $cat, $email, $contact, $street, $province, $postal, $adoptionDate, $status);
         if ($stmt->execute() === false) {
             throw new Exception('Execute failed: ' . htmlspecialchars($stmt->error));
         }
@@ -98,6 +100,10 @@ if (isset($_POST['submit_adoption'])) {
         $conn->rollback();
         echo "Error: " . $e->getMessage();
     }
+
+    // Redirect to homepage.html after successful insertion
+    header('Location: homepage.html');
+    exit();
 }
 ?>
 <!DOCTYPE html>

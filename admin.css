@@ -75,6 +75,21 @@ nav{
     padding: 15px 130px;
 }
 
+.nav_link a{
+    text-decoration: none;
+    color: #e7ecef;
+    font-weight: bold;
+    height: fit-content;
+    letter-spacing: 1.9px;
+}
+
+.nav_link a:hover {
+
+    color: #F49300;
+    transition: 0.4s;
+
+}
+
 .logo{
     padding-right: 125px;
 }
