@@ -44,18 +44,26 @@ body{
 
 
 /*nav bar button*/
+.right-navbar{
+    display: flex;
+    align-items: center;
+}
 .customer-btn{
     background-color: #47494D;
     color: #f2f2f2;
     font-weight: bold;
     border: 0;
-    height: 40px;
-    width: 150px;
+    height: 50px;
+    width: 110px;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    font-size: 13px;
 }
-.right-navbar button{
+.logout-btn{
     background-color: #47494D;
     color: #f2f2f2;
     font-weight: bold;
@@ -88,10 +96,10 @@ body{
     margin-left: 50px;
 }
 
-.right-navbar a {
+/* .right-navbar a {
     margin-right: 50px;
 
-}
+} */
 
 .right-navbar  {
     justify-content: right;
@@ -623,3 +631,36 @@ footer a:hover{
  
 }
 
+.row-cat{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cat-image{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0px 10px 40px;
+}
+.cat-images{
+    margin-right: 10px;
+}
+.add-btn{
+    background-color: #47494D;
+    border: 0;
+    height: 50px;
+    width: 120px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.add-btn a{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -62,13 +62,17 @@ while ($row = $donation_types_result->fetch_assoc()) {
     <nav>
         <ul class="nav_link">
             <div class="nav-links">
-                <img src="../img/Cat-1.png" alt="logo_cat">
+                <div class="logo">
+                <img src="../img/Cat-1.png" alt="logo_cat" class="logo-cat">
                 <h1>AduCats</h1>
+                </div>
                 <a href="cat-overview.php"><li>Cat Profiles</li></a>
                 <a href="adoptionRequest.php"><li>Adoption Requests</li></a>
                 <a href="donationForm.php"><li>Donation Forms</li></a>
-                <button class="logout-btn"><a href="../homepage.php">Customer Side</a></button>
+                <div class="btn">
+                <button class="customer-btn"><a href="../homepage.php">Customer Side</a></button>
                 <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
+                </div>
             </div>
         </ul>
     </nav>
@@ -79,20 +83,26 @@ while ($row = $donation_types_result->fetch_assoc()) {
         <div class="row">
             <!-- CATS -->
             <div class="dashboard-box">
+                <div class="total">
                 <h3>Total No. of Campus Cats</h3>
                 <p><?php echo $total_cats; ?></p>
+                </div>
             </div>
 
             <!-- DONATIONS -->
             <div class="dashboard-box">
+                <div class="total">
                 <h3>Total No. of Donations</h3>
                 <p><?php echo $total_donations; ?></p>
+                </div>
             </div>
 
             <!-- ADOPTIONS -->
             <div class="dashboard-box">
+                <div class="total">
                 <h3>Total No. of Adoptions</h3>
                 <p><?php echo $total_adoptions; ?></p>
+                </div>
             </div>
         </div>
     </section>
@@ -102,14 +112,18 @@ while ($row = $donation_types_result->fetch_assoc()) {
         <div class="row-donation">
             <!-- MONTHLY DONATION GRAPH -->
             <div class="donation">
-                <h3>Monthly Donations</h3>
+                <div class="chart-donations">
+                <h3>Donations</h3>
                 <canvas id="monthlyDonationsChart"></canvas>
+                </div>
             </div>
 
             <!-- KINDS OF DONATION -->
             <div class="donation-kinds">
+                <div class="chart-kinds">
                 <h3>Donation Kinds</h3>
                 <canvas id="donationTypesChart"></canvas>
+                </div>
             </div>
         </div>
 
@@ -118,7 +132,9 @@ while ($row = $donation_types_result->fetch_assoc()) {
             <!-- MONTHLY ADOPTION GRAPH -->
             <div class="adoption">
                 <h3>Adoption</h3>
+                <div class="chart-container">
                 <canvas id="monthlyAdoptionsChart"></canvas>
+                </div>
             </div>
         </div>
     </section>
@@ -197,12 +213,12 @@ while ($row = $donation_types_result->fetch_assoc()) {
                     label: 'Donation Types',
                     data: donationTypesData,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)'
+                        'rgba(255, 42, 0, 0.8)', //red
+                        'rgba(0, 143, 233, 0.8)' //blue
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)'
+                        'rgba(255, 99, 132, 1)', //red
+                        'rgba(54, 162, 235, 1)' //blue
                     ],
                     borderWidth: 1
                 }]

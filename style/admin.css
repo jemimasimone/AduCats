@@ -72,7 +72,7 @@ nav{
 }
 
 .nav_link li {
-    padding: 15px 130px;
+    padding: 0px 50px;
 }
 
 .nav_link a{
@@ -85,13 +85,14 @@ nav{
 
 .nav_link a:hover {
 
-    color: #F49300;
+    color: #4A3432;
     transition: 0.4s;
 
 }
 
 .logo{
-    padding-right: 125px;
+    /* padding-right: 125px; */
+    display: flex;
 }
 
 .dashboard{
@@ -132,16 +133,28 @@ nav{
 }
 .logo{
     display: flex;
+    align-items: center;
 }
 .logout-btn{
     width: 126px;
     height: 39px;
-    background-color: #FCFCF0;
-    border: #FCFCF0;
+    background-color: #F49300;
+    border: #F49300;
     border-radius: 4px;
     color: #F49300;
     margin: 15px 0px;
     font-size: 20px;
+}
+.customer-btn{
+    margin-right: 15px;
+    width: 126px;
+    height: 39px;
+    background-color: #F49300;
+    border: #F49300;
+    border-radius: 4px;
+    color: #F49300;
+    /* margin: 15px 0px; */
+    font-size: 13px;
 }
 .row-donation{
     display: flex;
@@ -153,11 +166,11 @@ nav{
     height: 370px;
     margin: 15px;
     padding: 10px;
-    display: flex;
+    /* display: flex; */
     border-radius: 10px;
     color: #FFFF;
     font-size: 20px;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .donation-kinds{
     background-color: #8cacc8;
@@ -169,7 +182,8 @@ nav{
     border-radius: 10px;
     color: #FFFF;
     font-size: 20px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .row-adoption{
     background-color: #8cacc8;
@@ -188,4 +202,42 @@ nav{
     flex-direction: column;
     align-items: center;
     padding: 15px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+}
+p{
+    font-size: 50px;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.chart-container {
+    position: relative;
+    width: 600px;
+    height: 400px; /* Adjust this height as needed */
+}
+.adoption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-donations {
+    position: relative;
+    width: 600px;
+    height: 400px; /* Adjust this height as needed */
+}
+.donation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-kinds{
+    position: relative;
+    width: 300px;
+    height: 300px; /* Adjust this height as needed */
 }
