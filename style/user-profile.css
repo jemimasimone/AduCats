@@ -79,6 +79,16 @@ body{
     border-color: transparent;
     margin-left: 60px;
   }
+  .save{
+    background-color: #6CCEE3;
+    width: 168px;
+    height: 76px;
+    color: #FCFCF0;
+    margin: 15px 0px;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-left: 60px;
+  }
   .changePassword{
     background-color: #8F6C49;
     width: 168px;
