@@ -33,11 +33,12 @@ check_user_role(1);
                 <h3>Donor</h3>
                 <div class="grid-container">
                     <div class="row-radio">
-                        <label class="no-click">Input Information</label>
                         <input type="radio" id="input-info" name="donor-info" value="Input">
+                        <label class="no-click">Input Information</label>
 
-                        <label class="no-click">Anonymous</label>
                         <input type="radio" id="anonymous-info" name="donor-info" value="Anonymous">
+                        <label class="no-click">Anonymous</label>
+
                     </div>
 
                     <div class="row">
@@ -55,11 +56,12 @@ check_user_role(1);
                 <h3>Donated</h3>
                 <div class="grid-container">
                     <div class="row-radio">
-                        <label class="no-click">Cash</label>
                         <input type="radio" id="cash" name="donation-info" value="Cash">
+                        <label class="no-click">Cash</label>
 
-                        <label class="no-click">Goods</label>
                         <input type="radio" id="goods" name="donation-info" value="Goods">
+                        <label class="no-click">Goods</label>
+
                     </div>
 
                     <div class="row">
