@@ -103,7 +103,7 @@ if (isset($_POST['submit_adoption'])) {
     }
 
     // Redirect to homepage.html after successful insertion
-    header('Location: homepage.php');
+    header('Location: user-page.php');
     exit();
 }
 ?>

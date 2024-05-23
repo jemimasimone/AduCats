@@ -45,5 +45,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script>
     alert("Donation form has been successfully submitted");
     // Redirect to login page
-    window.location.href = "../homepage.php";
+    window.location.href = "../user-page.php";
 </script>

@@ -81,7 +81,7 @@ body{
   width: 20rem;
   margin-bottom: 20px;
   justify-content: space-between;
-
+  padding: 10px;
 }
 
 .grid-container input::placeholder{

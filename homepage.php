@@ -26,7 +26,7 @@ check_user_role(1);
     <nav class="nav_bar">
 
         <div class="left-navbar">
-            <a id="profilelnk" href=" ">Profile</a>
+            <a id="profilelnk" href="user-profile.php">Profile</a>
             <a id="adoptionlnk" href="adoption.php">Adoption Request</a>
             <a id="donatelnk" href="donation.php">Donate</a>
 
@@ -35,7 +35,7 @@ check_user_role(1);
         <img id="AduCatsLogo" src="img/AduCatsLogo.png">
 
         <div class="right-navbar">
-            <a id="recordslnk" href=" ">Records</a>
+            <a id="recordslnk" href="user-page.php">Records</a>
             <a id="CatProflnk" href="cat-profile.php">Cat Profiles</a>
             <a id="Logoutlnk" href="php/logout.php"><button>Logout</button></a>
             <?php

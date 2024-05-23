@@ -32,11 +32,16 @@ $adoptions = $adoption_result->fetch_all(MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- LINKS -->
     <link rel="stylesheet" href="style/user-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="logo">
-        <img src="img/Cat-2.png" alt="logo_cat">
-        <h1>Adoption</h1>
+    <a href="homepage.php">
+            <img src="img/Cat-2.png" alt="logo_cat">
+        </a>
+        <h1>Records</h1>
     </header>
     <div class="hline"></div>
     <h3>Donation</h3>

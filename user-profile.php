@@ -27,41 +27,18 @@ $user_data = $user_result->fetch_assoc();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
-    <style>
-        .readonly { background-color: #f0f0f0; }
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        .popup-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            width: 300px;
-        }
-        .popup .close, .popup .cancel {
-            cursor: pointer;
-            float: right;
-            font-size: 20px;
-            margin-left: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <header class="logo">
-        <img src="img/Cat-2.png" alt="logo_cat">
-        <h1>AduCats</h1>
+    <a href="homepage.php">
+            <img src="img/Cat-2.png" alt="logo_cat">
+        </a>
+        <h1>Profile</h1>
     </header>
     <div class="hline"></div>
 
+    <section class="user-content">
     <form id="profile-form" action="php/edit_profile.php" method="post">
         <div class="upper">
             <h3>Account Information</h3>
@@ -101,16 +78,16 @@ $user_data = $user_result->fetch_assoc();
     <div id="passwordPopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePasswordPopup()">&times;</span>
-            <h3>Change Password</h3>
+            <h3 class="change">Change Password</h3>
             <form id="password-form" method="post" action="php/change_password.php">
                 <input type="password" id="currentPassword" name="currentPassword" placeholder="Current Password" required>
                 <input type="password" id="newPassword" name="newPassword" placeholder="New Password" required>
                 <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
-                <button type="submit" class="savePassword">SAVE</button>
-                <button type="button" class="cancel" onclick="closePasswordPopup()">CANCEL</button>
+                <button type="submit" class="changePassword">SAVE</button>
             </form>
         </div>
     </div>
+    </section>
 
     <script>
     const editBtn = document.getElementById('editBtn');
