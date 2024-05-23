@@ -120,7 +120,7 @@ body{
 
     .right-navbar{
         order:3;
-        margin-left: 50px;
+
     }
 
 
@@ -133,10 +133,7 @@ body{
           transition: 0.5s;
       }
 
-      .nav_bar{
-        justify-content: left;
-      
-      }
+
 
 
 }
