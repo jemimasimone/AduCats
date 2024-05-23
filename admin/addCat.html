@@ -7,25 +7,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- LINKS -->
-        <link rel="stylesheet" href="../admin.css">
+        <link rel="stylesheet" href="../style/cat.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- NAVIGATION BAR -->
-        <nav>
-            <ul class="nav_link">
-                <div class="nav-links">
-                    <img src="img/Cat-1.png" alt="logo_cat">
-                    <h1>AduCats</h1>
-                    <li>Cat Profiles</li>
-                    <li>Adoption Request</li>
-                    <li>Donate</li>
-                    <button class="logout-btn" type="submit">Logout</button>
-                </div>
-            </ul>
-        </nav>
+        <!-- NAVIGATION -->
+        <nav class="nav_bar">
+
+            <div class="left-navbar">
+                <a href="index.html">Home</a>
+                <a href="cat-overview.php">Cat Profiles</a>
+                <a href="adoptionRequest.php">Adoption Request</a> 
+                <a href="donationForm.php">Donation Form</a> 
+            </div>
+            
+            <img id="AduCatsLogo" src ="../img/AduCatsLogoWhite.png">
+            
+            <div class="right-navbar">
+                <a href=""><button>Logout</button></a>
+            </div>
+           
+          </nav>
 
         <!-- CONTENT -->
         <section class="content">

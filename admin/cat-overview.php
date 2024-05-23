@@ -16,27 +16,26 @@
         <nav class="nav_bar">
 
             <div class="left-navbar">
-                <a href="adoption.html">Adoption Request</a> 
-                <a href="donation.html">Donate</a> 
+                <a href="index.html">Home</a>
+                <a href="cat-overview.php">Cat Profiles</a>
+                <a href="adoptionRequest.php">Adoption Request</a> 
+                <a href="donationForm.php">Donation Form</a> 
             </div>
             
             <img id="AduCatsLogo" src ="../img/AduCatsLogoWhite.png">
             
             <div class="right-navbar">
-                <a href="homepage.html">About</a> 
-                <a href="register.html"><button> Sign Up</button></a>
+                <a href=""><button>Logout</button></a>
             </div>
            
           </nav>
            
-           
-       
-            
-          </nav>
-
         <!-- SECTION: CAT OVERVIEW -->
        
         <section class="overview">
+            <div>
+                <a href="addCat.html">Add Cat</a>
+            </div>
             <div class="cat-table">
                 <?php
                     // Fetch cat data from the database
