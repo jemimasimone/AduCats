@@ -88,6 +88,60 @@ body{
 
 /*responsiveness of navbar*/
 
+
+
+@media (max-width:1400px){
+      
+    .left-navbar, .right-navbar{
+        margin: 20px;
+        justify-content: center;
+  
+
+    }
+
+    #adoptionlnk, #donatelnk{
+        display: none;
+        transition: 0.3s;
+    }
+
+    .left-navbar{
+        display: flex;
+        order:1;
+        align-items: center;
+        text-align: center;
+        margin:0;
+    
+    }
+
+    #profilelnk{
+        font-size: 25px;
+    }
+
+
+    .right-navbar{
+        order:3;
+        margin-left: 50px;
+    }
+
+
+  
+      #AduCatsLogo {
+          order:2;
+          height: 80px;
+          margin-left: 50px;
+          padding:0;
+          transition: 0.5s;
+      }
+
+      .nav_bar{
+        justify-content: left;
+      
+      }
+
+
+}
+
+
 @media (max-width:1200px){
       
     .left-navbar{
@@ -95,15 +149,13 @@ body{
         
 
     }
-      .right-navbar a{
+
+    #adoptionlnk, #donatelnk, #recordslnk, #CatProflnk{
           display: none;
           
       }
       
-      .right-navbar button{
-          display: none;
-      }
-  
+
       #AduCatsLogo {
           height: 80px;
           margin-right: 0;
@@ -111,6 +163,7 @@ body{
           padding:0;
           transition: 0.5s;
       }
+
 
       .nav_bar{
         justify-content: left;
@@ -127,14 +180,13 @@ body{
     .left-navbar a  {
         display: none;
       }
+
+      #Logoutlnk button{
+        width: 100px;
+      }
+
+    
   
-      .right-navbar a{
-          display: none;
-      }
-      
-      .right-navbar button{
-          display: none;
-      }
   
       #AduCatsLogo {
           height: 90px;
