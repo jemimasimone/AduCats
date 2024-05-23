@@ -168,9 +168,13 @@ body{
     margin: 50px;
     display: flex;
     justify-content: center;
-    
-    
-;
+    flex-direction: column;
+}
+
+.add{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 28px;
 }
 
 /*container ng ibat ibang posa*/
@@ -191,6 +195,13 @@ body{
 
 }
 
+/*container ng indiv posa*/
+.submissions{
+    align-items: center;
+    margin:3rem;
+
+}
+
 .catindiv{
     display: flex;
     flex-direction: column;
@@ -198,6 +209,15 @@ body{
     
 }
 
+.indivsub{
+    background-color: #4A3432;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    
+}
 
 /*picture ng indiv posa*/
 .cat-cover{

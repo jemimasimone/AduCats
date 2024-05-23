@@ -47,8 +47,8 @@
                         $adoptionDate = $row['adoptionDate'];
 
                         echo '
-                        <div class="cat">
-                            <div class="catindiv" onclick="openPopup(\'' . $adoptionID . '\', \'' . $adopterName . '\', \'' . $cat . '\',
+                        <div class="submissions">
+                            <div class="indivsub" onclick="openPopup(\'' . $adoptionID . '\', \'' . $adopterName . '\', \'' . $cat . '\',
                             \'' . $email . '\', \'' . $contactno . '\', \'' . $street . '\',
                             \'' . $province . '\', \'' . $postal . '\', \'' . $adoptionDate . '\')">
                                 <p>Adoption ID: ' . $adoptionID . '</p>

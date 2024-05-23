@@ -34,7 +34,7 @@
        
         <section class="overview">
             <div>
-                <a href="addCat.html">Add Cat</a>
+                <a class="add" href="addCat.html">Add Cat</a>
             </div>
             <div class="cat-table">
                 <?php

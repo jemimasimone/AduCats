@@ -140,7 +140,6 @@ if (isset($_POST['submit_adoption'])) {
                     
                     <div class="row">
                         <input type="date" id="birthdate" class="small-input" placeholder="Birthdate" name="birthdate" required>
-                        <label for="gender">Gender: </label>
                         <select name="gender" id="gender" class="small-input" required>
                             <option value="">Gender</option>
                             <option value="Male">Male</option>

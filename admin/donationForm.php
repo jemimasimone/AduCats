@@ -52,8 +52,8 @@
                         $donationDate = $row['donationDate'];
 
                         echo '
-                        <div class="cat">
-                            <div class="catindiv" onclick="openPopup(\'' . $donationID . '\', \'' . $donatorName . '\', \'' . $donationType . '\',
+                        <div class="submissions">
+                            <div class="indivsub" onclick="openPopup(\'' . $donationID . '\', \'' . $donatorName . '\', \'' . $donationType . '\',
                             \'' . $email . '\', \'' . $contactno . '\', \'' . $amount . '\', \'' . $goods . '\',
                             \'' . $mot . '\', \'' . $receiver . '\', \'' . $donationDate . '\')">
                                 <p>Donation ID: ' . $donationID . '</p>
