@@ -42,30 +42,39 @@ check_user_role(2);
             <div class="form_box">
                 <form class="cat_form" action="../php/add_cat.php" method="post" enctype="multipart/form-data">
                     <div class="row-cat">
-                    <label for="">Cat Name:</label><input type="text" name="name" required>
-                    <label for="">Gender:</label>
-                        <select name="gender">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    <label for="">Birthdate:</label><input type="date" name="birthdate" required>
+                        <label for="">Cat Name:</label><input type="text" name="name" required>
                     </div>
 
                     <div class="row-cat">
-                    <label for="">Health Status:</label><input type="text" name="health" required>
-                    <label for="">Usually Seen:</label><input type="text" name="place" required>
-                    <label for="">Adoption Status:</label>
-                        <select name="adoption">
-                            <option value="For adoption">For adoption</option>
-                            <option value="Not for adoption">Not for adoption</option>
+                        <label for="">Gender:</label>
+                            <select name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        <label for="">Birthdate:</label><input type="date" name="birthdate" required>
+                    </div>
+
+                    <div class="row-cat">
+                        <label for="">Health Status:</label><input type="text" name="health" required>
+                    </div>
+
+                    <div class="row-cat">
+                        <label for="">Usually Seen:</label><input type="text" name="place" required>
+                    </div>
+
+                    <div class="row-cat">
+                        <label for="">Adoption Status:</label>
+                            <select name="adoption">
+                                <option value="For adoption">For adoption</option>
+                                <option value="Not for adoption">Not for adoption</option>
                         </select>
                     </div>
 
-                    <div class="cat-image">
+                    <div class="cat-image row-cat">
                         <label for="" class="cat-images">Cat Images</label><input type="file" accept="image/*" name="images[]" required>
                     </div>
                     <div class="button">
-                    <button class="add-btn" type="submit" name="add_cat">Add Cat</button>
+                        <button class="add-btn" type="submit" name="add_cat">Add Cat</button>
                     </div>
                 </form>
             </div>

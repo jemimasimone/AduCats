@@ -8,8 +8,9 @@
     font-style: normal;
 }
 body{
-    background-color: #a3cef1;
-    color: #e7ecef;
+    background-color: #f2f2f2;
+    margin:0;
+    padding: 0;
 }
 
 .content{
@@ -58,22 +59,7 @@ input{
     margin: 15px 0px;
 } */
 
-nav{
-    padding: 5px;
-    width: 100%;
-    height: 10vh;
-    background-color: #274c77;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.nav_link{
-    list-style: none;
-}
-
-.nav_link li {
-    padding: 0px 50px;
-}
+/*
 
 .nav_link a{
     text-decoration: none;
@@ -91,8 +77,223 @@ nav{
 }
 
 .logo{
-    /* padding-right: 125px; */
+    padding-right: 125px;
     display: flex;
+} */
+
+/*nav bar*/
+
+/* .nav_bar{
+    padding: 5px;
+    width: 100%;
+    height: 10vh;
+    background-color: #274c77;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+.nav_bar {
+    display: flex;
+    padding: 20px;
+    flex-basis: 15%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid #F49300;
+    font-size: 20px;
+    flex-wrap: wrap;
+    min-width: fit-content;
+
+}
+
+/*nav bar links*/
+
+.nav_bar{
+    list-style: none;
+}
+
+.nav_bar li {
+    padding: 0px 50px;
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: #F49300;
+    font-weight: bold;
+    height: fit-content;
+    letter-spacing: 1.9px;
+}
+
+.nav_bar a:hover {
+
+    color: #282A2C;
+    transition: 0.4s;
+
+}
+
+
+/*nav bar button*/
+
+.right-navbar button{
+    background-color: #47494D;
+    color: #f2f2f2;
+    font-weight: bold;
+    border: 0;
+    height: 40px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right-navbar button:hover{
+    background-color: #F49300;
+    color: #f2f2f2;
+    transition: 0.3s;
+
+}
+
+
+/*nav bar logo*/
+#AduCatsLogo{
+    height: 75px;
+    margin-top: -10px;
+}
+
+/*left nav bar*/
+.left-navbar{
+    display: flex;
+}
+
+.left-navbar a {
+    margin-left: 50px;
+}
+
+.right-navbar a {
+    margin-right: 50px;
+
+}
+
+.right-navbar  {
+    justify-content: right;
+
+}
+
+/*responsiveness of navbar*/
+
+
+
+@media (max-width:1400px){
+      
+    .left-navbar, .right-navbar{
+        margin: 20px;
+        justify-content: center;
+  
+
+    }
+
+    #adoptionlnk, #donatelnk{
+        display: none;
+        transition: 0.3s;
+    }
+
+    .left-navbar{
+        display: flex;
+        order:1;
+        align-items: center;
+        text-align: center;
+        margin:0;
+    
+    }
+
+    #profilelnk{
+        font-size: 25px;
+    }
+
+
+    .right-navbar{
+        order:3;
+
+    }
+
+
+  
+      #AduCatsLogo {
+          order:2;
+          height: 80px;
+          margin-left: 50px;
+          padding:0;
+          transition: 0.5s;
+      }
+
+
+
+
+}
+
+
+@media (max-width:1200px){
+      
+    .left-navbar{
+        order: 2;
+        
+
+    }
+
+    #adoptionlnk, #donatelnk, #recordslnk, #CatProflnk{
+          display: none;
+          
+      }
+      
+
+      #AduCatsLogo {
+          height: 80px;
+          margin-right: 0;
+          order: 1;
+          padding:0;
+          transition: 0.5s;
+      }
+
+
+      .nav_bar{
+        justify-content: left;
+      
+      }
+
+
+}
+
+
+@media (max-width:900px){
+   
+   
+    .left-navbar a  {
+        display: none;
+      }
+
+      #Logoutlnk button{
+        width: 100px;
+      }
+
+    
+  
+  
+      #AduCatsLogo {
+          height: 90px;
+          transition: 0.4s;
+          margin-right: 0;
+          justify-content: left;
+          text-align: left;
+          transition: 0.6s;
+  
+      }
+
+      
+      .nav_bar{
+        justify-content: center;
+      
+      }
+
 }
 
 .dashboard{

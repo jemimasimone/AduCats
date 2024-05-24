@@ -58,23 +58,24 @@ while ($row = $donation_types_result->fetch_assoc()) {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- NAVIGATION BAR -->
-    <nav>
-        <ul class="nav_link">
-            <div class="nav-links">
-                <div class="logo">
-                <img src="../img/Cat-1.png" alt="logo_cat" class="logo-cat">
-                <h1>AduCats</h1>
-                </div>
-                <a href="cat-overview.php"><li>Cat Profiles</li></a>
-                <a href="adoptionRequest.php"><li>Adoption Requests</li></a>
-                <a href="donationForm.php"><li>Donation Forms</li></a>
-                <div class="btn">
-                <button class="customer-btn"><a href="../homepage.php">Customer Side</a></button>
-                <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
-                </div>
-            </div>
-        </ul>
+    <!--NAVBAR-->
+
+    <nav class="nav_bar">
+
+        <div class="left-navbar">
+            <a href="cat-overview.php"><li>Cat Profiles</li></a>
+            <a href="adoptionRequest.php"><li>Adoption Requests</li></a>
+            <a href="donationForm.php"><li>Donation Forms</li></a>
+
+        </div>
+
+        <img id="AduCatsLogo" src="../img/AduCatsLogo.png">
+
+        <div class="right-navbar">
+            <button class="customer-btn"><a href="../homepage.php">Customer Side</a></button>
+            <button class="logout-btn"><a href="../php/logout.php">Logout</a></button>
+        </div>
+
     </nav>
 
     <!-- CONTENT -->
