@@ -56,6 +56,17 @@ check_user_role(2);
                         $receiver = $row['receiver'];
                         $donationDate = $row['donationDate'];
 
+                        // Escape single quotes in values
+                        $donatorName = addslashes($donatorName);
+                        $donationType = addslashes($donationType);
+                        $email = addslashes($email);
+                        $contactno = addslashes($contactno);
+                        $amount = addslashes($amount);
+                        $goods = addslashes($goods);
+                        $mot = addslashes($mot);
+                        $receiver = addslashes($receiver);
+                        $donationDate = addslashes($donationDate);
+
                         echo '
                         <div class="submissions">
                             <div class="indivsub" onclick="openPopup(\'' . $donationID . '\', \'' . $donatorName . '\', \'' . $donationType . '\',
@@ -89,7 +100,6 @@ check_user_role(2);
             <label>Mode of Transaction: <input type="text" id="popupMOT" readonly></label>
             <label>Receiver: <input type="text" id="popupReceiver" readonly></label>
             <label>Donated On: <input type="text" id="popupDate" readonly></label>
-            <!-- Add any additional popup content here -->
         </div>
         <div class="backbtn">
             <button onclick="closePopup()">Back</button>

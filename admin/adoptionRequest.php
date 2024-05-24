@@ -119,6 +119,7 @@ check_user_role(2);
 
         function closePopup() {
             document.getElementById("popup").classList.remove("open-popup");
+            document.getElementById("responsePopup").classList.remove("open-popup");
         }
 
         function response() {
