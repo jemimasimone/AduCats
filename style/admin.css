@@ -3,9 +3,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: "Aoboshi One", serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
     background-color: #f2f2f2;
@@ -113,7 +111,7 @@ input{
 }
 
 .nav_bar li {
-    padding: 0px 50px;
+    padding: 0px 20px;
 }
 
 .nav_bar a {
@@ -134,7 +132,27 @@ input{
 
 /*nav bar button*/
 
-.right-navbar button{
+/*nav bar button*/
+.right-navbar{
+    display: flex;
+    align-items: center;
+}
+.customer-btn{
+    background-color: #47494D;
+    color: #f2f2f2;
+    font-weight: bold;
+    border: 0;
+    height: 40px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+    font-size: 13px;
+}
+.logout-btn{
     background-color: #47494D;
     color: #f2f2f2;
     font-weight: bold;
@@ -146,9 +164,18 @@ input{
     cursor: pointer;
 }
 
+.right-navbar a{
+    color: #f2f2f2;
+}
+
+
 .right-navbar button:hover{
     background-color: #F49300;
-    color: #f2f2f2;
+    transition: 0.3s;
+
+}
+.right-navbar a:hover{
+    color: #47494D;
     transition: 0.3s;
 
 }
@@ -156,26 +183,32 @@ input{
 
 /*nav bar logo*/
 #AduCatsLogo{
+    order:1;
     height: 75px;
     margin-top: -10px;
 }
 
 /*left nav bar*/
 .left-navbar{
+    order:2;
     display: flex;
+
 }
 
+.right-navbar{
+    order:3;
+}
 .left-navbar a {
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .right-navbar a {
-    margin-right: 50px;
+    margin-right: 20px;
 
 }
 
-.right-navbar  {
-    justify-content: right;
+.right-navbar button {
+    margin-left: 20px;
 
 }
 
@@ -314,7 +347,7 @@ input{
 }
 
 .dashboard-box{
-    background-color: #8cacc8;
+    background-color: #8F6C49;
     width: 250px;
     height: 175px;
     margin: 15px;
@@ -336,33 +369,12 @@ input{
     display: flex;
     align-items: center;
 }
-.logout-btn{
-    width: 126px;
-    height: 39px;
-    background-color: #F49300;
-    border: #F49300;
-    border-radius: 4px;
-    color: #F49300;
-    margin: 15px 0px;
-    font-size: 20px;
-}
-.customer-btn{
-    margin-right: 15px;
-    width: 126px;
-    height: 39px;
-    background-color: #F49300;
-    border: #F49300;
-    border-radius: 4px;
-    color: #F49300;
-    /* margin: 15px 0px; */
-    font-size: 13px;
-}
 .row-donation{
     display: flex;
     justify-content: center;
 }
 .donation{
-    background-color: #8cacc8;
+    background-color: #8F6C49;
     width: 650px;
     height: 370px;
     margin: 15px;
@@ -374,7 +386,7 @@ input{
     /* justify-content: center; */
 }
 .donation-kinds{
-    background-color: #8cacc8;
+    background-color: #8F6C49;
     width: 650px;
     height: 370px;
     margin: 15px;
@@ -387,7 +399,7 @@ input{
     align-items: center;
 }
 .row-adoption{
-    background-color: #8cacc8;
+    background-color: #8F6C49;
     width: 650px;
     height: 370px;
     margin: 15px;

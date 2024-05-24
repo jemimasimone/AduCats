@@ -44,6 +44,7 @@ while ($row = $donation_types_result->fetch_assoc()) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,20 +53,24 @@ while ($row = $donation_types_result->fetch_assoc()) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- LINKS -->
     <link rel="stylesheet" href="../style/admin.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <!--NAVBAR-->
 
     <nav class="nav_bar">
 
         <div class="left-navbar">
-            <a href="cat-overview.php"><li>Cat Profiles</li></a>
-            <a href="adoptionRequest.php"><li>Adoption Requests</li></a>
-            <a href="donationForm.php"><li>Donation Forms</li></a>
+            <a href="cat-overview.php">
+                <li>Cat Profiles</li>
+            </a>
+            <a href="adoptionRequest.php">
+                <li>Adoption Requests</li>
+            </a>
+            <a href="donationForm.php">
+                <li>Donation Forms</li>
+            </a>
 
         </div>
 
@@ -85,24 +90,24 @@ while ($row = $donation_types_result->fetch_assoc()) {
             <!-- CATS -->
             <div class="dashboard-box">
                 <div class="total">
-                <h3>Total No. of Campus Cats</h3>
-                <p><?php echo $total_cats; ?></p>
+                    <h3>Total No. of Campus Cats</h3>
+                    <p><?php echo $total_cats; ?></p>
                 </div>
             </div>
 
             <!-- DONATIONS -->
             <div class="dashboard-box">
                 <div class="total">
-                <h3>Total No. of Donations</h3>
-                <p><?php echo $total_donations; ?></p>
+                    <h3>Total No. of Donations</h3>
+                    <p><?php echo $total_donations; ?></p>
                 </div>
             </div>
 
             <!-- ADOPTIONS -->
             <div class="dashboard-box">
                 <div class="total">
-                <h3>Total No. of Adoptions</h3>
-                <p><?php echo $total_adoptions; ?></p>
+                    <h3>Total No. of Adoptions</h3>
+                    <p><?php echo $total_adoptions; ?></p>
                 </div>
             </div>
         </div>
@@ -114,16 +119,16 @@ while ($row = $donation_types_result->fetch_assoc()) {
             <!-- MONTHLY DONATION GRAPH -->
             <div class="donation">
                 <div class="chart-donations">
-                <h3>Donations</h3>
-                <canvas id="monthlyDonationsChart"></canvas>
+                    <h3>Donations</h3>
+                    <canvas id="monthlyDonationsChart"></canvas>
                 </div>
             </div>
 
             <!-- KINDS OF DONATION -->
             <div class="donation-kinds">
                 <div class="chart-kinds">
-                <h3>Donation Kinds</h3>
-                <canvas id="donationTypesChart"></canvas>
+                    <h3>Donation Kinds</h3>
+                    <canvas id="donationTypesChart"></canvas>
                 </div>
             </div>
         </div>
@@ -134,7 +139,7 @@ while ($row = $donation_types_result->fetch_assoc()) {
             <div class="adoption">
                 <h3>Adoption</h3>
                 <div class="chart-container">
-                <canvas id="monthlyAdoptionsChart"></canvas>
+                    <canvas id="monthlyAdoptionsChart"></canvas>
                 </div>
             </div>
         </div>
@@ -142,9 +147,9 @@ while ($row = $donation_types_result->fetch_assoc()) {
 
     <script>
         // Prepare data for monthly donations chart
-        const monthlyDonationsLabels = <?php echo json_encode(array_map(function($month) {
-            return date('F', mktime(0, 0, 0, $month, 1));
-        }, array_column($monthly_donations, 'month'))); ?>;
+        const monthlyDonationsLabels = <?php echo json_encode(array_map(function ($month) {
+                                            return date('F', mktime(0, 0, 0, $month, 1));
+                                        }, array_column($monthly_donations, 'month'))); ?>;
         const monthlyDonationsData = <?php echo json_encode(array_column($monthly_donations, 'count')); ?>;
 
         const ctxDonations = document.getElementById('monthlyDonationsChart').getContext('2d');
@@ -155,26 +160,41 @@ while ($row = $donation_types_result->fetch_assoc()) {
                 datasets: [{
                     label: 'Monthly Donations',
                     data: monthlyDonationsData,
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: 'rgba(242, 242, 242, 1)',
                     borderWidth: 2,
                     fill: false
                 }]
             },
             options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'rgba(242, 242, 242, 1)' // Label color
+                        }
+                    }
+                },
                 scales: {
+                    x: {
+                        ticks: {
+                            color: 'rgba(242, 242, 242, 1)' // Text color
+                        }
+                    },
                     y: {
                         beginAtZero: true,
                         precision: 0,
-                        stepSize: 1
+                        stepSize: 1,
+                        ticks: {
+                            color: 'rgba(242, 242, 242, 1)' // Text color
+                        }
                     }
                 }
             }
         });
 
         // Prepare data for monthly adoptions chart
-        const monthlyAdoptionsLabels = <?php echo json_encode(array_map(function($month) {
-            return date('F', mktime(0, 0, 0, $month, 1));
-        }, array_column($monthly_adoptions, 'month'))); ?>;
+        const monthlyAdoptionsLabels = <?php echo json_encode(array_map(function ($month) {
+                                            return date('F', mktime(0, 0, 0, $month, 1));
+                                        }, array_column($monthly_adoptions, 'month'))); ?>;
         const monthlyAdoptionsData = <?php echo json_encode(array_column($monthly_adoptions, 'count')); ?>;
 
         const ctxAdoptions = document.getElementById('monthlyAdoptionsChart').getContext('2d');
@@ -185,17 +205,32 @@ while ($row = $donation_types_result->fetch_assoc()) {
                 datasets: [{
                     label: 'Monthly Adoptions',
                     data: monthlyAdoptionsData,
-                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderColor: 'rgba(242, 242, 242, 1)',
                     borderWidth: 2,
                     fill: false
                 }]
             },
             options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'rgba(242, 242, 242, 1)' // Label color
+                        }
+                    }
+                },
                 scales: {
+                    x: {
+                        ticks: {
+                            color: 'rgba(242, 242, 242, 1)' // Text color
+                        }
+                    },
                     y: {
                         beginAtZero: true,
                         precision: 0,
-                        stepSize: 1
+                        stepSize: 1,
+                        ticks: {
+                            color: 'rgba(242, 242, 242, 1)' // Text color
+                        }
                     }
                 }
             }
@@ -214,17 +249,24 @@ while ($row = $donation_types_result->fetch_assoc()) {
                     label: 'Donation Types',
                     data: donationTypesData,
                     backgroundColor: [
-                        'rgba(255, 42, 0, 0.8)', //red
-                        'rgba(0, 143, 233, 0.8)' //blue
+                        'rgba(244, 147, 0, 0.8)', //orange
+                        'rgba(242, 242, 242, 0.8)' //white
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)', //red
-                        'rgba(54, 162, 235, 1)' //blue
+                        'rgba(244, 147, 0, 0.8)', //orange
+                        'rgba(242, 242, 242, 0.8)' //white
                     ],
                     borderWidth: 1
                 }]
             },
             options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'rgba(242, 242, 242, 1)' // Label color
+                        }
+                    }
+                },
                 responsive: true,
                 maintainAspectRatio: false,
                 tooltips: {
@@ -238,5 +280,5 @@ while ($row = $donation_types_result->fetch_assoc()) {
         });
     </script>
 </body>
-</html>
 
+</html>
